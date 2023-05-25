@@ -1,0 +1,22 @@
+@media screen and (min-width: 100px) {
+}
+@media screen and (min-width: 576px) {
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 992px) {
+}
+@media screen and (min-width: 1200px) {
+  .recentlyApiPage {
+    padding: 20px;
+    background-color: #F9FBFD;
+  }
+  .recentlyApiPage__header {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .recentlyApiPage__paragraph{
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,10 @@
+.details-page{
+    /* background-color: red !important; */
+    /* display: none; */
+    max-width: 1500px;
+    overflow: hidden;
+}
+.details-page-content{
+    width: 100%;
+    margin: 0 auto;
+}

@@ -1,0 +1,401 @@
+
+.assetNav a {
+  text-decoration: none;
+  color: black;
+}
+.assetNav {
+  display: flex;
+  gap: 2rem;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 25px;
+  border-bottom: 1px solid #eff2f5;
+  white-space: nowrap;
+}
+
+.trial {
+  display: none;
+}
+.leftAssNav {
+  display: flex;
+  gap: 1rem;
+  padding-right: 15px;
+  border-right: 2px solid grey;
+}
+.middleAssNav {
+  display: flex;
+  gap: 1.8rem;
+  color: rgb(88, 102, 126);
+}
+.rightAssNav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.box {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0px;
+}
+
+.leftbtn {
+  background-color: rgb(239, 242, 245);
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+.table-container {
+  overflow-x: scroll;
+  padding: 25px;
+}
+
+.table {
+  table-layout: fixed;
+  counter-reset: rowNumber;
+  border-collapse: collapse;
+}
+th {
+  padding: 10px;
+}
+.table tr {
+  white-space: nowrap;
+}
+
+.table tr > td:nth-child(2) {
+  counter-increment: rowNumber;
+}
+.table tr td:nth-child(2)::before {
+  content: counter(rowNumber);
+}
+.thead {
+  border-bottom: 1px solid #eff2f5;
+}
+
+.thead th:nth-child(1) {
+  width: 1%;
+  padding-left: 30px;
+}
+.thead th:nth-child(2) {
+  width: 1%;
+}
+.thead th:nth-child(3) {
+  text-align: left;
+  width: 10%;
+}
+.thead th:nth-child(4) {
+  width: 15%;
+}
+.thead th:nth-child(5) {
+  width: 7%;
+}
+.thead th:nth-child(6) {
+  width: 7%;
+}
+.thead th:nth-child(7) {
+  width: 7%;
+}
+.thead th:nth-child(8) {
+  width: 14%;
+}
+.thead th:nth-child(9) {
+  width: 14%;
+}
+.thead th:nth-child(10) {
+  width: 14%;
+}
+.thead th:nth-child(11) {
+  width: 15%;
+}
+
+.tableRow {
+  border-bottom: 1px solid #eff2f5;
+  height: 60px;
+}
+
+.tbody td {
+  text-align: center;
+  cursor: pointer;
+}
+td a {
+  color: black;
+  text-decoration: none;
+}
+
+.coins > span {
+  color: rgb(128, 138, 157);
+  text-transform: uppercase;
+}
+
+.name {
+  padding-left: 30px;
+}
+.name-wrap {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.name-wrap > .coins {
+  line-height: 0;
+  color: black;
+}
+
+.changer span {
+  color: rgb(128, 138, 157);
+  display: block;
+}
+.changer {
+  text-align: right;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.pagination li {
+  list-style: none;
+  padding: 15px;
+  cursor: pointer;
+}
+.pagination li:hover {
+  background-color: rgb(229, 229, 242);
+  border-radius: 10px;
+}
+
+.active {
+  background-color: rgb(56, 97, 251);
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+}
+.chartTwo {
+  width: 85%;
+}
+
+.change {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}
+.markets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.volume {
+  display: flex;
+  text-align: right;
+}
+.dropMenu {
+  position: relative;
+}
+
+.dropDown-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* gap: 1.5rem; */
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  position: absolute;
+  right: 0.5rem;
+  font-weight: 700;
+}
+.tableCard {
+  display: none;
+}
+.mobileTable {
+  background: rgb(248, 250, 253);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.topMobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  padding: 10px;
+}
+.leftTopMobile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.rightTopMobile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.middleMobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+.leftMiddleMobile {
+  display: flex;
+  gap: 10px;
+  border-right: 1px solid rgb(220, 220, 220);
+  width: 60%;
+  margin: 5px;
+  padding: 5px;
+}
+.rightMiddleMobile {
+  display: flex;
+  flex-direction: column;
+  /* gap: 5px; */
+  text-align: center;
+  /* background: green; */
+  height: 100px;
+  /* width: 200px; */
+  width: 40%;
+}
+
+.centerMobile {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+.bottomMobile {
+  text-align: center;
+  color: rgb(56, 97, 251);
+  /* text-shadow: 2px royalblue; */
+}
+/* .mobileChart{
+  width: 100%;
+} */
+.leftLeft {
+  color: grey;
+}
+.hour {
+  padding: 10px;
+}
+.hourParagraph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.span {
+  text-transform: uppercase;
+  color: rgb(128, 138, 157);
+}
+.mobilebutton {
+  color: rgb(56, 97, 251);
+  background: rgb(193, 215, 255);
+  border: none;
+  padding: 3px 10px;
+  border-radius: 7px;
+}
+
+/* Media Queries */
+
+/* @media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) { */
+@media only screen and (max-width: 1340px) {
+  .assetNav {
+    display: none;
+  }
+  .table-container {
+    overflow-x: scroll;
+    padding: 0;
+  }
+  .table {
+    display: none;
+  }
+  .tableCard {
+    display: block;
+  }
+  .trial {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+    font-size: 14px;
+    /* padding: 25px 0; */
+    border-bottom: 2px solid gainsboro;
+    font-weight: 600;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  .trialTop {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px 5px 25px;
+  }
+  .leftAssNav1 {
+    display: flex;
+    gap: 1rem;
+    padding-right: 15px;
+  }
+
+  .rightAssNav1 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .middleAssNav1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 5px 25px;
+    color: rgb(88, 102, 126);
+  }
+  /*
+  table thead tr th:nth-child(1) {
+    background-color: white;
+    position: sticky;
+    left: 0;
+  }
+  table thead tr th:nth-child(2) {
+    background-color: white;
+    position: sticky;
+    left: 5%;
+  }
+  table thead tr th:nth-child(3) {
+    background-color: white;
+    position: sticky;
+    left: 9%;
+  }
+
+  table tbody tr td:nth-child(1) {
+    background-color: white;
+    position: sticky;
+    left: 0;
+  }
+  table tbody tr td:nth-child(2) {
+    background-color: white;
+    position: sticky;
+    left: 5%;
+  }
+  table tbody tr td:nth-child(3) {
+    background-color: white;
+    position: sticky;
+    left: 9%;
+  } */
+  /* .pagination {
+    background: red;
+    padding: 5px;
+  } */
+  .pagination li {
+    padding: 7px;
+  }
+
+  .active {
+    padding: 5px;
+  }
+}
+

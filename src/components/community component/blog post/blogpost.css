@@ -1,0 +1,9 @@
+.blogPost{
+    border-top: 0px !important;
+    /* background-color:#F8FAFD !important; */
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    /* border-color: #F0F3F6 !important; */
+    /* height: 300px !important;
+    overflow-y: scroll; */
+}

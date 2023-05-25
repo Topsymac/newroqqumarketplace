@@ -1,0 +1,45 @@
+@media screen and (min-width: 100px) {
+  .RecentlyAdded {
+    /* width: 33%; */
+    width: 448px;
+    height: 200px;
+    padding: 16px;
+    box-shadow: rgba(88, 102, 126, 0.08) 0px 4px 24px,
+      rgba(88, 102, 126, 0.12) 0px 1px 2px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 576px) {
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 992px) {
+  .RecentlyAdded {
+    /* width: 33%; */
+    width: 448px;
+    height: 200px;
+    padding: 16px;
+    box-shadow: rgba(88, 102, 126, 0.08) 0px 4px 24px,
+      rgba(88, 102, 126, 0.12) 0px 1px 2px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .RecentlyAdded {
+    /* width: 33%; */
+    /* width: 448px; */
+    width: 400px;
+    height: 200px;
+    padding: 16px;
+    box-shadow: rgba(88, 102, 126, 0.08) 0px 4px 24px,
+      rgba(88, 102, 126, 0.12) 0px 1px 2px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  #AddIcon{
+    width: 20px;
+    height: 20px;
+  }
+}

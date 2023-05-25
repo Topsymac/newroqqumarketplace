@@ -1,0 +1,61 @@
+.watchlistButton {
+}
+
+.watchlistButton {
+  border: 0px;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: #5d6b82 !important;
+  /* color:black !important; */
+  padding: 7.5px 10px !important;
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  letter-spacing: 0.03rem;
+}
+
+.watchlistButtonActive {
+  letter-spacing: 0.03rem;
+  border: 0px;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: #3861fb !important;
+  /*color:black !important;
+  */
+  line-height: 1.5;
+  margin: 0px;
+  padding: 7.5px 15px !important;
+  background-color: #f0f6ff;
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.watchlistButton:hover {
+  letter-spacing: 0.03rem;
+  line-height: 1.5;
+  margin: 0px;
+  border: 0px;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: rgb(34, 37, 49) !important;
+  padding: 7.5px 10px !important;
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+/* .watchlistButton:active{
+    border: 0px;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    color:blue !important;
+    padding: 5px;
+} */

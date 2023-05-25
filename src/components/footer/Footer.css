@@ -1,0 +1,148 @@
+.footerContainer {
+  background: url(../../Images/Footer\ BG.png);
+  color: #fff;
+  padding: 100px 25px;
+  margin-top: -18px;
+}
+
+.storeLink {
+  display: flex;
+  gap: 2rem;
+}
+
+.Appstore {
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.Playstore {
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.footerRoqqu {
+  padding-top: 50px;
+}
+
+.footerLeft p {
+  padding: 15px 0px;
+  width: 90%;
+}
+
+.footerGrid {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 25rem; */
+}
+
+.footerInput {
+  background: #2a2c44;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.footerInput input {
+  background: transparent;
+  border: none;
+}
+
+.footerInput img {
+  width: 1.7rem;
+}
+
+.footerInput input::placeholder {
+  font-size: small;
+  color: #a7b1bc;
+}
+
+.footerLinks {
+  margin-top: 30px;
+}
+
+.footerLinks img {
+  padding: 0px 10px;
+  width: 50px;
+}
+
+.footerbottom {
+  border-top: 2px solid #2a2c44;
+  padding: 50px 0px;
+  margin: 50px 0px;
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+
+  /* gap: 20px; */
+}
+
+.grid-container li {
+  list-style: none;
+  padding: 5px 0px;
+  color: #a7b1bc;
+  /* font-size: small; */
+}
+
+.grid-container h5 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bottomRight {
+  width: 50%;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1280px) {
+  .footerContainer {
+    /* width: 100%; */
+    margin: 0;
+    padding: 140px 20px;
+  }
+  .footerGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .storeLink {
+    /* width: 100vw; */
+    display: flex;
+    gap: 3rem;
+  }
+  .footerInput {
+    width: fit-content;
+  }
+  .footerLinks {
+    width: auto;
+    display: flex;
+  }
+  .grid-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+  }
+  .grid-container ul {
+    padding: 0;
+  }
+  .footerbottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .bottomRight {
+    width: 86vw;
+  }
+}

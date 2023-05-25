@@ -1,0 +1,108 @@
+/* .secondDiv{
+    width: 100%;
+    text-align: end;
+    margin-left: 1%;
+    display: flex;
+    justify-content: end;
+}
+.price{
+    text-align: center !important;
+    justify-content: center;
+    padding-right: 30px;
+}
+.changes-0{
+    padding-right: 23px;
+    color: red;
+
+}
+.changes-1{
+    padding-right: 180px;
+    width: 255px;
+    color: blue;
+}
+.changes-2{
+    padding-right: 180px;
+    width: 100px;
+    color: green;
+}
+.added{
+    justify-self: end;
+    color: blueviolet;
+}
+.blockchain{
+    padding-right: 35px;
+    color:palevioletred
+}
+
+.volume{
+    padding-right: 120px;
+    color:pink
+}
+
+.market{
+    padding-right: 70px;
+    color:orange
+}
+
+.buys{
+    height: 20px;
+    width: 100px;
+}
+
+.tableRow{
+    padding-top: 30px !important;
+} */
+
+.secondDiv{
+    text-align: end;
+    margin-left: 1%;
+    display: flex;
+    justify-content: end;
+    flex:1 1 0px;
+    flex-direction: row;
+    /* width: 10px; */
+    /* padding-left: 40%; */
+}
+
+.price{
+    /* text-align: end !important;
+    width: 60px; */
+    /* justify-self: end; */
+    /* padding-right: 30px; */
+    /* padding-right: 15px; */
+    /* padding-right: 129px; */
+    /* justify-self:start !important; */
+    /* text-align: start !important; */
+    /* min-width: 12% !important; */
+    /* flex:1 1 0px; */
+    /* width: 30%; */
+}
+
+.changes-0{
+    /* position: relative;
+    left: 50px; */
+    /* padding-left: 150px; */
+    /* padding-right: 20px; */
+    /* color: red; */
+}
+.changes-1{
+    /* padding-right: 125px;
+    width: 255px; */
+    /* color: blue; */
+}
+
+.market{
+    /* padding-right: 50px; */
+    /* color:orange */
+}
+
+.volume{
+    /* padding-right: 90px; */
+    /* color:pink */
+}
+.blockchain{
+    /* width: 100px; */
+    padding-right: 15px;
+    /* width: 15px; */
+    /* color:palevioletred */
+}

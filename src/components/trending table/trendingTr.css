@@ -1,0 +1,8 @@
+.trendingTr>div>li{
+    line-height: 1.5;
+    margin: 0px;
+    color: rgb(34, 37, 49);
+    font-size: 12px;
+    font-weight: bold;
+    /* color: #EFF2F5; */
+}

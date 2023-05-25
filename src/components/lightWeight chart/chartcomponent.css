@@ -1,0 +1,61 @@
+/* .test > .tv-lightweight-charts {
+  height: 600px !important;
+  width: 600px !important;
+  border-bottom: 0px;
+}
+
+.test td::before {
+  display: none;
+  border-width: 0px;
+}
+
+.test td {
+  border-width: 0px;
+}
+
+.test > div > table > tr > td:nth-child(2) > div > canvas {
+  left: 35px !important;
+}
+
+.test > div > table > tr:nth-child(2) {
+  border-bottom: 0px !important;
+} */
+
+.tv-lightweight-charts .tv-chart-widget__pane-views .tv-chart-widget__pane-view .tv-price-axis__row:not(:last-child) {
+  /* color: #EFF2F5 !important;
+   */
+   /* color: #d9f6ebdd;
+    */
+    color: #eeeeeed1;
+}
+
+.chartComponent > div >.tv-lightweight-charts > table > tr:nth-child(1) > td:nth-child(2) {
+  border: 1px solid #eff2f5 !important;
+}
+
+.circle{
+  /* position: absolute;
+  top: 1rem;
+  left: 1rem; */
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  height: 0.7rem;
+  width: 0.7rem;
+  background-color: #EA3943;
+}
+.circle2{
+  /* position: absolute;
+  top: 1rem;
+  left: 1rem; */
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  height: 0.7rem;
+  width: 0.7rem;
+  background-color: #16C784;
+}

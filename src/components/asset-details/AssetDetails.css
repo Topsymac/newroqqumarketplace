@@ -1,0 +1,784 @@
+.container {
+  display: flex;
+  margin: 0 0 0 0;
+  align-items: start;
+  padding: 30px;
+}
+.follow {
+  display: none;
+}
+.assetz-notification{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+.left-container {
+  width: 35%; 
+}
+@media (max-width: 600px) {
+  .left-container {
+    width: 100%;
+  }
+}
+.breadcrumb {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.cryptocurrencies {
+  color: gray;
+}
+.coins {
+  color: gray;
+}
+.bitcoin-asset {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.bitcoin-logo {
+  width: 25px;
+}
+.bitcoin {
+  font-weight: bolder;
+  font-size: 30px;
+}
+.btc {
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f2f5;
+  padding: 5px;
+  font-size: 12px;
+}
+.asset-notification {
+  display: none;
+}
+.star-icon {
+  border-radius: 6px;
+  padding: 7px 10px 7px 10px;
+  border: 0.5px solid grey;
+  cursor: pointer;
+}
+.follow-icon{
+  background-color: #3861fb;
+  border-radius: 10px;
+  border: 1px solid #3861fb;
+  padding: 0.5rem;
+  color: #fff;
+  width: 100px;
+  cursor: pointer; 
+}
+.follow-icon:hover {
+  background-color: #2544d4;
+}
+.arrow-up-icon {
+  border-radius: 6px;
+  padding: 6px 7px 6px 7px;
+  border: 0.5px solid grey;
+}
+.rank-section {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.rank {
+  border: none;
+  border-radius: 5px;
+  background-color: gray;
+  color: #fff;
+  font-size: 10px;
+}
+.coin {
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f2f5;
+  padding: 6px 7px 6px 7px;
+  color: gray;
+  font-size: 10px;
+}
+.watchlist {
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f2f5;
+  padding: 6px 7px 6px 7px;
+  color: gray;
+  font-size: 10px;
+}
+.source-code-section {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  flex-wrap: wrap;
+}
+.anchor-icon {
+  display: flex;
+  align-items: center;
+  background-color: #f0f2f5;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: small;
+  padding: 7px 10px 7px 10px;
+  height: 10px;
+  cursor: pointer;
+}
+.bitcoin-org {
+  padding: 0.5px 10px 0.5px 10px;
+  width: 60px;
+  align-items: center;
+  display: flex;
+}
+.search-icon {
+  display: flex;
+  align-items: center;
+  background-color: #f0f2f5;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: small;
+  padding: 7px 10px 7px 10px;
+  height: 10px;
+  cursor: pointer;
+}
+.search-icon:hover {
+  background-color: #222531;
+}
+.explorer {
+  padding: 0.5px 10px 0.5px 10px;
+  width: 60px;
+  align-items: center;
+  display: flex;
+}
+.person-icon {
+  column-gap: 2px;
+  display: flex;
+  align-items: center;
+  background-color: #f0f2f5;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: small;
+  padding: 7px 10px 7px 10px;
+  height: 10px;
+  cursor: pointer;
+}
+.whitepaper-section {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.whitepaper {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: small;
+  padding: 7px 10px 7px 10px;
+  height: 10px;
+  column-gap: 5px;
+  cursor: pointer;
+}
+.whitepaper-sub {
+  column-gap: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: small;
+  padding: 7px 10px 7px 10px;
+  height: 10px;
+  cursor: pointer;
+}
+.tags {
+  color: gray;
+  font-size: small;
+}
+.tag-list {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+.mineable {
+  display: flex;
+  align-items: center;
+  background-color: #f0f2f5;
+  border-radius: 25px;
+  margin-top: 10px;
+  padding: 7px 10px 7px 10px;
+  height: 10px;
+  column-gap: 5px;
+  font-size: 12px;
+  color: gray;
+}
+.pow {
+  display: flex;
+  align-items: center;
+  background-color: #f0f2f5;
+  border-radius: 25px;
+  margin-top: 10px;
+  padding: 7px 10px 7px 10px;
+  height: 10px;
+  column-gap: 5px;
+  font-size: 12px;
+  color: gray;
+}
+.number {
+  display: flex;
+  align-items: center;
+  background-color: #f0f2f5;
+  border-radius: 25px;
+  margin-top: 10px;
+  padding: 7px 10px 7px 10px;
+  height: 10px;
+  column-gap: 5px;
+  font-size: 12px;
+  color: gray;
+}
+.store-of-value {
+  display: flex;
+  align-items: center;
+  background-color: #f0f2f5;
+  border-radius: 25px;
+  margin-top: 10px;
+  padding: 7px 10px 7px 10px;
+  height: 10px;
+  column-gap: 5px;
+  font-size: 12px;
+  color: gray;
+}
+.view-all {
+  display: flex;
+  align-items: center;
+  background-color: #f0f2f5;
+  border-radius: 25px;
+  margin-top: 10px;
+  padding: 7px 10px 7px 10px;
+  height: 10px;
+  column-gap: 15px;
+  color: #3861fb;
+  font-size: 10px;
+}
+.third-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem 0;
+}
+@media (max-width: 500px) {
+  .third-section {
+    display: none;
+  }
+}
+/* Mobile view Market Cap */
+.third-section2 {
+  padding: 1rem 0;
+}
+.market-cap-sub2 {
+  display: flex;
+  justify-content: space-between;
+}
+.market-cap-value{
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.market-volume-section2{
+  display: flex;
+  justify-content: space-between;
+}
+/* @media (max-width: 500px) {
+  .third-section {
+    display: none;
+  }
+} */
+.market-cap-sub {
+  padding: 0 1rem 0 0;
+  border-right: 1px solid rgb(178, 170, 170);
+}
+.fully-diluted {
+  padding: 0 1rem;
+  border-right: 1px solid rgb(178, 170, 170);
+}
+.market-cap-main {
+  padding: 0 1rem;
+  border-right: 1px solid rgb(178, 170, 170);
+}
+.market-sub {
+  padding: 0 0 0 1rem;
+}
+/* RIGHT CONTAINER */
+.right-container {
+  width: 65%;
+}
+@media (max-width: 600px) {
+  .right-container {
+    width: 100%;
+  }
+}
+.right-container-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(190, 186, 186);
+}
+@media (max-width: 600px) {
+  .right-container-top {
+    flex-direction: column;
+  }
+}
+.bitcoin-price {
+  font-size: small;
+  color: gray;
+  margin-top: 70px;
+}
+.btc-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.red-button {
+  background-color: #ea3943;
+  color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ea3943;
+  padding: 0.5rem;
+}
+.eth-price-list {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.eth-price {
+  color: gray;
+}
+.symbol {
+  text-transform: uppercase;
+}
+.low-list {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+.low {
+  color: gray;
+  font-size: small;
+}
+.low-list-button {
+  width: 60%;
+  border: none;
+  height: 10px;
+}
+.low-list-twenty-four{
+  display: none;
+}
+.more-stats {
+  display: none;
+}
+.market-cap {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  font-size: small;
+  color: gray;
+}
+.market-cap-button {
+  border: none;
+  border-radius: 5px;
+}
+.market-digit {
+  font-size: small;
+}
+.market-arrow-up {
+  color: green;
+}
+.market-arrow-up-one {
+  color: red;
+}
+.market-arrow-up-button {
+  width: 100px;
+  border: none;
+  height: 5px;
+  background-color: gray;
+  border-radius: 5px;
+}
+.market-volume {
+  color: gray;
+ 
+  display: flex;
+  align-items: center;
+}
+.market-volume-section {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  font-size: small;
+  color: gray;
+}
+.market-cap-one {
+  /* margin-bottom: 5px; */
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  font-size: small;
+  color: gray;
+}
+.market-digit-ones {
+  margin-bottom: 55px;
+  font-size: small;
+}
+.vol {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  color: gray;
+  font-size: small;
+}
+.vol-one {
+  font-size: small;
+  color: black;
+}
+@media (max-width: 600px) {
+  .buttons {
+    display: flex;
+    column-gap: 0 !important;
+    /* background-color: green; */
+  }
+}
+.button-list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 55px;
+  column-gap: 10px;
+  flex-wrap: wrap;
+  row-gap: .7rem;
+}
+@media (max-width: 600px) {
+  .button-list {
+    column-gap: 3px;
+  }
+}
+.buy {
+  background-color: #3861fb;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+  height: 30px;
+  border: 0.5px solid blue;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  margin-top: 70px;
+}
+.buy:hover {
+  background-color: #2544d4;
+}
+.earn-crypto {
+  background-color: #3861fb;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+  height: 30px;
+  border: 0.5px solid blue;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+.earn-crypto:hover {
+  background-color: #2544d4;
+}
+.sponsor {
+  font-size: small;
+}
+
+.website-links {
+  display: none;
+}
+
+.tag-link {
+  display: none;
+}
+/* CONVERTER */
+.bitcoin-converter {
+  display: flex;
+  align-items: center;
+}
+/* media query */
+
+@media (max-width: 600px) {
+.body {
+    margin: auto;
+    overflow-x: hidden;
+  }
+.bitcoin-logo {
+    width: 25px;
+    display: block;
+  }
+.bitcoin-asset {
+    display: block;
+    display: flex;
+  }
+.bitcoin {
+    display: none;
+  }
+.btc {
+    display: none;
+  }
+.eth-price {
+    display: none;
+  }
+.eth-prices {
+    display: none;
+  }
+.low-list {
+    display: flex;
+    column-gap: 30px;
+  }
+.breadcrumb {
+    display: none;
+    background-color: #ea3943;
+  }
+.bitcoin-price {
+    text-align: left;
+  }
+.whitepaper-section {
+    display: none;
+  }
+.source-code-section {
+    display: none;
+  }
+.tag-list {
+    display: none;
+  }
+.more-stats {
+  display: block;
+  width: 100%;
+  justify-content: center;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+}
+.more-stats-one {
+  align-items: center;
+}
+
+.rank-section {
+  width: 100%;
+  margin-bottom: -80px;
+}
+.rank {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  text-align: right;
+  height: 100%;
+  padding: 0.3rem 0.1rem;
+}
+
+.left-container {
+  text-align: left;
+}
+
+.sponsor {
+  justify-content: flex-end;
+}
+
+.tags {
+  display: none;
+}
+
+.website-links {
+  display: flex;
+  align-items: center;
+  column-gap: 60px;
+  margin-top: -20px;
+  border-bottom: 1px solid #dddfe6;
+}
+.tag-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+
+.tag-lists {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    font-size: small;
+}
+
+.tag-sub {
+    border-radius: 5px;
+    font-size: small;
+}
+
+.pow-sub {
+    background-color: #eff2f5;
+    border-radius: 5px;
+    font-size: small;
+}
+
+.number-sub {
+    background-color: #eff2f5;
+    border-radius: 5px;
+    font-size: small;
+}
+}
+
+@media (max-width: 400px) {
+  .sub-right-container {
+    padding: 0;
+    margin: 0;
+  }
+  .btc-price {
+    column-gap: 70px;
+  }
+  .website-links {
+    justify-content: center;
+    display: flex;
+    margin-top: -20px;
+    border-bottom: 1px solid #dddfe6;
+    justify-content: space-between;
+  
+  }
+  .website-link {
+    font-size: 12px;
+  }
+  .buy {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+ 
+
+  .eth-price {
+    margin-top: 10px;
+  }
+
+  .earn-crypto {
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    align-items: center;
+  }
+
+  .bitcoin-logo {
+    width: 25px;
+    border-radius: 20px;
+  }
+
+  .bitcoin-asset {
+    display: block;
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .bitcoin {
+    display: none;
+  }
+
+  .star-icon {
+    margin-right: 20px;
+    
+  }
+
+  .follow-icon{
+    display: block;
+    background-color: #3861fb;
+    border-radius: 10px;
+    border: 1px solid #3861fb;
+    padding: 0.5rem;
+    color: #fff;
+    width: 100px;
+  }
+  .asset-notification {
+    display: block;
+    border-radius: 6px;
+    padding: 7px 10px 7px 10px;
+    border: 0.5px solid grey;
+    cursor: pointer;
+  }
+}
+.mobile-view {
+  display: none;
+}
+@media (max-width: 500px) {
+  .mobile-view {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+    .bitcoin-asset {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+   .asset-notification {
+    display: block;
+    border-radius: 6px;
+    padding: 7px 10px 7px 10px;
+    border: 0.5px solid grey;
+    cursor: pointer;
+  } 
+  .rank-section{
+    margin-bottom: -50px; 
+  } 
+  .rank{
+    height: 30px;
+    width: 70px;
+    align-items: center;
+    padding: 0.1rem;
+    background-color: #ea3943;
+  }
+ .btc{
+  font-weight: bolder;
+  font-size: 30px;
+  column-gap: 70px;
+}
+
+ .bitcoin-logo {
+    width: 39px;
+    border-radius: 20px;
+    column-gap: 50px; 
+  }
+  .assetz-notification{
+    margin-right: -60px;
+  }
+  .button-list {
+    justify-content: space-between;
+    width: 100%;
+  }
+ 
+  .low-listed{
+    margin-left: -30px;
+  }
+
+  .low-list-button{
+    display: none;
+  }
+  .low-list-twenty-four{
+    display: block;
+    background-color: #dddfe6;
+    padding: 0.2rem;
+    border-radius: 5px;
+    margin-left: 100px;  
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+
+ .website-links{
+    column-gap: 150px;
+    font-size: 14.5px;
+  }  
+  .website-link{
+    color: grey;
+  }
+  .tag-sub{
+    color: grey;
+    background-color: #f0f2f5;
+    padding: 0.3rem;
+  }
+}

@@ -1,0 +1,25 @@
+.communityComponent__card > .card {
+  padding: 0px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.communityComponent__Header {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.communityComponent__Link {
+  font-weight: 500;
+  font-size: 12px;
+  text-decoration: none;
+  color: #3861fb !important;
+}
+
+.communityComponent__guestPost {
+  border-bottom: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-color: #F0F3F6 !important;
+}
+

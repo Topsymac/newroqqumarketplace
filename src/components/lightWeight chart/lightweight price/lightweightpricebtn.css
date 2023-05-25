@@ -1,0 +1,25 @@
+.lightweightPriceBtnDiv {
+  color: #5d6b82 !important;
+  /* background-color: white;; */
+  /* height: 20px !important; */
+  padding: 0px 5px !important;
+  font-size: 12px !important;
+}
+
+
+.lightweightPriceBtn {
+  border: 0px;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: #5d6b82 !important;
+  /* background-color: white; */
+  padding: 7px 5px !important;
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  letter-spacing: 0.03rem;
+}
+
+

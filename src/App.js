@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+// import { useEffect, useState } from "react";
+import "./App.css";
+import Home from "./Pages/home/Home";
+import Details from "./Pages/details/Details";
+import TrendingTokenPage from "./Pages/trending token page/TrendingTokenPage";
+import RecentlyAddedTokenPage from "./Pages/recently added token page/RecentlyAddedTokenPage";
+import ChartApiComponent from "./components/lightWeight chart/ChartApiComponent";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/details",
+      element: <Details />,
+    },
+    {
+      path: "/trending-cryptocurrency",
+      element: <TrendingTokenPage />,
+    },
+    {
+      path: "/recently-added-coin",
+      element: <RecentlyAddedTokenPage />,
+    },
+    {
+      path: "/chart",
+      element: <ChartApiComponent />,
+    },
+  ]);
+  // const [quote, setQuote] = useState("");
+
+  // useEffect(() => {
+  //   fetch("https://api.kanye.rest/oranges")
+  //     .then((res) => res.json())
+  //     .then((data) => setQuote(data.quote))
+  //     .catch((err) => console.log(err));
+  // }, []);
+  //
+
+  // return (
+  //   <div className="App">
+  //     {/* <div>
+  //       <h1>{quote}</h1>
+  //     </div> */}
+  //     <Home />
+  //   </div>
+  // );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

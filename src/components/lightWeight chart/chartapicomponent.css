@@ -1,0 +1,26 @@
+/* .fixed-position{
+  position: fixed;
+  top: 0;
+  left: 0;
+} */
+
+@media screen and (min-width: 100px){
+    .chartApiComponent__communityComponent{
+        margin-top: 40px;
+        width:100%
+    }
+    .chartApiComponent__chart{
+        width: 100%;
+    }
+}@media screen and (min-width: 576px){}
+@media screen and (min-width: 768px){}
+@media screen and (min-width: 992px){}
+@media screen and (min-width: 1200px){
+    .chartApiComponent__chart{
+        width: 66%;
+    }
+    .chartApiComponent__communityComponent{
+        margin-top: 0px;
+        width:31.5%
+    }
+}

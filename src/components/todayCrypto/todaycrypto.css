@@ -1,0 +1,32 @@
+@media screen and (min-width: 100px) {
+  .todayCrypto {
+    padding: 20px;
+    background-color: #fafbfe;
+  }
+  .todayCrypto__header {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .todayCrypto__paragraph{
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 576px) {
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 992px) {
+}
+@media screen and (min-width: 1200px) {
+  .todayCrypto {
+    padding: 20px;
+    background-color: #fafbfe;
+  }
+  .todayCrypto__header {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .todayCrypto__paragraph{
+    font-size: 15px;
+  }
+}
