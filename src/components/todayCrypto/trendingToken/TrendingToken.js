@@ -8,7 +8,7 @@ import { ThemeContext } from "../../../context/ThemeContext";
 
 const TrendingToken = () => {
   const [trendingAllToken, setTrendingAllToken] = useState([]);
-  const [change, setChange] = useState(0);
+  // const [change, setChange] = useState(0);
 
   // useEffect(() => {
   //   fetch("https://staging.roqqu.com/v2/all-tokens")
@@ -69,7 +69,7 @@ const TrendingToken = () => {
         //       (response) => response.json())
         //     )
         //   )
-// console.log(coinImg)
+        // console.log(coinImg)
         // Add price history data to token objects
         const tokensWithData = data.data.map((token, index) => ({
           ...token,
@@ -82,9 +82,7 @@ const TrendingToken = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  useEffect(() => {
-  
-  }, [])
+  useEffect(() => {}, []);
 
   function calculateChange(priceHistory) {
     try {
@@ -117,8 +115,8 @@ const TrendingToken = () => {
               : "",
         }}
       >
-        <div className="d-flex justify-content-between align-items-center mb-3">
-          <div className="d-flex align-items-baseline">
+        <div className="d-flex justify-content-between align-items-center mb-3 trendingCard">
+          <div className="d-flex align-items-baseline trendinggIcon">
             <div id="trendingIcon">
               <img src={TrendingIcon} alt="TrendingIcon" id="trendingIcon" />
             </div>
@@ -131,7 +129,7 @@ const TrendingToken = () => {
           </div>
           <div style={{ fontWeight: "bold", fontSize: "12px" }}>
             <Link
-              className="d-flex align-items-center"
+              className="d-flex align-items-center "
               to="trending-cryptocurrency"
               style={{ textDecoration: "none" }}
               state={{ id: "3" }}
@@ -150,14 +148,28 @@ const TrendingToken = () => {
             <div
               key={trendingToken.id}
               className="d-flex justify-content-between align-items-center mx-2"
-              style={{ fontSize: "14px" }}
+              style={{
+                fontSize: "14px",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                paddingTop: "5px",
+              }}
             >
-              <div>
-                <ul className="list-unstyled d-flex">
+              <div
+                style={{
+                  paddingLeft: "-35px",
+                  marginLeft: "-35px",
+                }}
+              >
+                <ul
+                  className="list-unstyled d-flex"
+                  style={{ listStyle: "none", display: "flex", gap: "15px" }}
+                >
                   <li>
                     <span className="text-secondary">{index + 1}</span>
                   </li>
-                  <li style={{ marginLeft: "22px" }}>
+                  <li>
                     <img
                       src={`https://roqqu.com/static/media/tokens/${trendingToken.symbol}.png`}
                       alt=""
@@ -170,7 +182,7 @@ const TrendingToken = () => {
                   </li>
                   <li
                     className="mx-2 text-secondary"
-                    style={{ textTransform: "uppercase" }}
+                    style={{ textTransform: "uppercase", color: "grey" }}
                   >
                     {trendingToken.symbol}
                   </li>
@@ -188,7 +200,11 @@ const TrendingToken = () => {
                             {`${change}%`}
                           </div>
                         ) : (
-                          <div style={{ color: "#16c784" }}>
+                          <div
+                            style={{
+                              color: "#16c784",
+                            }}
+                          >
                             <IoMdArrowDropup color="#16c784" fontSize="20px" />
                             {`${change}%`}
                           </div>

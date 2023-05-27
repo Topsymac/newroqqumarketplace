@@ -43,12 +43,12 @@ const TodayCrypto = () => {
               <b>0.24%</b>
             </span>{" "}
             decrease over the last day.{" "}
-            <a href="#" className="text-secondary" style={{ fontSize: "16px" }}>
+            <a href="ggg" className="text-secondary" style={{ fontSize: "16px" }}>
               Read More
             </a>
           </p>
         </div>
-        <div className="d-none d-xl-flex flex-wrap justify-content-between align-items-center  ">
+        <div className="d-none d-xl-flex flex-wrap justify-content-between align-items-center todayCard ">
           <div>
             <TrendingToken />
           </div>

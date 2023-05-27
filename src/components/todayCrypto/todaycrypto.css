@@ -1,3 +1,8 @@
+.todayCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @media screen and (min-width: 100px) {
   .todayCrypto {
     padding: 20px;
@@ -7,7 +12,7 @@
     font-weight: bold;
     font-size: 20px;
   }
-  .todayCrypto__paragraph{
+  .todayCrypto__paragraph {
     font-size: 15px;
   }
 }
@@ -26,7 +31,7 @@
     font-weight: bold;
     font-size: 25px;
   }
-  .todayCrypto__paragraph{
+  .todayCrypto__paragraph {
     font-size: 15px;
   }
 }

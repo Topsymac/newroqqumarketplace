@@ -183,7 +183,7 @@ const AssetTable = () => {
           containerClassName="pagination"
           pageClassName="page-item"
           pageLinkClassName="page-link"
-          activeLinkClassName="active"
+          activeLinkClassName="paginationActive"
         />
       </div>
     </div>
