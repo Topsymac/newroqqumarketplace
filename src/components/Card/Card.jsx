@@ -100,7 +100,7 @@ const Card = () => {
                           item.change > 0 ? "green" : "red"
                         } card-percentages `}
                       >
-                        <span>
+                        <span> 
                           {item.change > 0 ? (
                             <MdArrowDropUp className="chevron-up" />
                           ) : (

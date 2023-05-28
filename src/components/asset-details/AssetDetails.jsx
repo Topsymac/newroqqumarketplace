@@ -29,7 +29,15 @@ const AssetDetails = () => {
   const { theme } = useContext(ThemeContext);
   // const [color, setColor] = useState("red");
   const location = useLocation();
-  const [data, setData] = useState({});
+  const [data, setData] = useState({
+    coinData: {
+      created_at: "2021-05-13T13:47:34.000Z",
+      fixed: 1,
+      name: "Bitcoin",
+      symbol: "btc",
+    },
+    price: 22860.058269,
+  });
   const [data2, setData2] = useState({});
   const [watchlisted, setWatchlisted] = useState(false);
   const [showMore, setShowMore] = useState(false);
@@ -43,7 +51,7 @@ const AssetDetails = () => {
         console.log("api data", data);
       });
     if (location.state) {
-      // console.log("state data", location.state);
+      console.log("state data", location.state);
       setData(location.state);
     }
     // eslint-disable-next-line
@@ -58,13 +66,13 @@ const AssetDetails = () => {
       }}
     >
       <div className="left-container">
-        <div className="">
+        <div className="left-container-breadcrumb">
           <div className="breadcrumb">
             <p className="cryptocurrencies">cryptocurencies</p>
             <BiChevronRight />
             <p className="coins">Coins</p>
             <BiChevronRight />
-            <p className="">Bitcoin</p>
+            <p className="breadcrumb-bitcoin">Bitcoin</p>
           </div>
         </div>
 
@@ -125,7 +133,7 @@ const AssetDetails = () => {
           <div
             className="rank"
             style={{
-              backgroundColor: theme === "Light" ? "#f0f2f5" : "#333546",
+              backgroundColor: theme === "Light" ? "#666872" : "#333546",
               color: theme === "Light" ? "black" : "#ffffff",
             }}
           >
@@ -337,7 +345,10 @@ const AssetDetails = () => {
         >
           <div className="sub-right-container">
             <p className="bitcoin-price">
-              {data.coinData ? data.coinData.name : "BTC"}
+              {data.coinData ? data.coinData.name : "BTC"} Price{" "}
+              <span className="btc-prices">
+                ({data.coinData ? data.coinData.symbol : "BTC"})
+              </span>
             </p>
             {/* <h1>$28,565.75</h1> */}
             <div className="btc-price">
@@ -386,7 +397,7 @@ const AssetDetails = () => {
               </div>
             </div>
           </div>
-          {/* Mobile view Market Cap  */}
+          {/* Mobile view Market Cap    when you click on more stats*/}
           <div className="mobile-view-container">
             <div className={`${showMore && "show"} mobile-view `}>
               <div className="third-section2">
@@ -427,8 +438,9 @@ const AssetDetails = () => {
                     </p>
                   </div>
                 </div>
+
                 <div
-                  className="fully-diluted"
+                  className="market-cap-sub"
                   style={{
                     borderRight:
                       theme === "Light"
@@ -436,23 +448,27 @@ const AssetDetails = () => {
                         : "1px solid #222531",
                   }}
                 >
-                  <p className="market-cap-one">
-                    Fully diluted market cap
-                    <BsInfoCircle />
-                  </p>
-                  <p className="market-digit-ones">
-                    {data.data
-                      ? data.data.marketcap.current_marketcap_usd
-                          .toFixed(0)
-                          .toString()
-                          .toLocaleString()
-                      : "$531,526,680,809"}
-                    <p className="market-arrow-up-one">
-                      {" "}
-                      <IoMdArrowDropup />
-                      1.72%
+                  <div className="market-cap-sub2">
+                    <p className="market-cap">
+                      Fully diluted market cap
+                      <BsInfoCircle />
                     </p>
-                  </p>
+                    <div className="market-cap-value">
+                      <p className="market-digit">
+                        {data2.data
+                          ? data2.data.marketcap.current_marketcap_usd
+                              .toFixed(0)
+                              .toString()
+                              .toLocaleString()
+                          : "$531,526,680,809"}
+                      </p>
+                      <p className="market-arrow-up-one">
+                        {" "}
+                        <IoMdArrowDropup />
+                        1.72%
+                      </p>
+                    </div>
+                  </div>
 
                   <div className="market-volume-section">
                     {/* <p className="market-volume">24h Volume/Market </p>
@@ -460,7 +476,7 @@ const AssetDetails = () => {
                   </div>
                 </div>
                 <div
-                  className="market-cap-main"
+                  className="market-cap-sub"
                   style={{
                     borderRight:
                       theme === "Light"
@@ -468,40 +484,38 @@ const AssetDetails = () => {
                         : "1px solid #222531",
                   }}
                 >
-                  <p className="market-cap">
-                    Volume <button className="market-cap-button">24h</button>
-                    <BsInfoCircle />
-                  </p>
-                  <p className="market-digit">$536,669,680,809</p>
-                  <p className="market-arrow-up">
-                    {" "}
-                    <IoMdArrowDropup />
-                    27.28
-                  </p>
+                  <div className="market-cap-sub2">
+                    <p className="market-cap">
+                      Volume <button className="market-cap-button">24h</button>
+                      <BsInfoCircle />
+                    </p>
+                    <div className="market-cap-value">
+                      <p className="market-digit">$536,669,680,809</p>
+                      <p className="market-arrow-up">
+                        {" "}
+                        <IoMdArrowDropup />
+                        27.28
+                      </p>
+                    </div>
+                  </div>
 
-                  <div className="vol">
-                    <div className="vols">
+                  <div className="vol-cex-container">
+                    <div className="vol-cex">
                       <p>
                         CEX <BsInfoCircle />
                       </p>
+                      <p>13,456,676,777</p>
+                    </div>
+                    <div className="vol-cex">
                       <p>
                         DEX <BsInfoCircle />
                       </p>
-                    </div>
-
-                    <div
-                      className="vol-one"
-                      style={{
-                        color: theme === "Light" ? "black" : "#FFFFFF",
-                      }}
-                    >
-                      <p>13,456,676,777</p>
                       <p>13,456,676,777</p>
                     </div>
                   </div>
                 </div>
                 <div
-                  className="market-sub"
+                  className="market-cap-sub"
                   style={{
                     borderRight:
                       theme === "Light"
@@ -509,16 +523,29 @@ const AssetDetails = () => {
                         : "1px solid #222531",
                   }}
                 >
-                  <p className="market-cap">
-                    Circulating Supply
-                    <BsInfoCircle />
-                  </p>
-                  <p className="market-digit">19,354,081 BTC</p>
-                  <p>
-                    <button className="market-arrow-up-button"></button>
-                  </p>
+                  <div className="vol-cex-container">
+                    <p className="market-cap">
+                      Circulating Supply
+                      <BsInfoCircle />
+                    </p>
+                    <p className="market-digit">19,354,084 BTC</p>
+                  </div>
+                  <button className="market-arrow-up-button"></button>
+                  <p></p>
 
-                  <div className="vol">
+                  <div
+                    className="market-cap-sub"
+                  
+                  >
+                    <p className="market-cap">
+                      Max Supply <BsInfoCircle />
+                    </p>
+                    <p className="market-cap">
+                      Total suply <BsInfoCircle />
+                    </p>
+                  </div>
+
+                  {/* <div className="vol">
                     <div className="vols">
                       <p>
                         CEX <BsInfoCircle />
@@ -537,7 +564,7 @@ const AssetDetails = () => {
                       <p>13,456,676,777</p>
                       <p>13,456,676,777</p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -552,6 +579,8 @@ const AssetDetails = () => {
               </h3>
             </button>
           </div>
+
+          {/* end of more stats */}
 
           <div className="buttons">
             <div className="button-list">

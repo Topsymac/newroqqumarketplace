@@ -12,7 +12,7 @@ import "./chartapicomponent.css";
 
 const ChartApiComponent = (props) => {
   const location = useLocation();
-  const coinDataSymbol = location.state.coinData.symbol;
+  const [coinDataSymbol,setCoinData] =  'btc';
 
   const [prices, setPrices] = useState([]);
   const [timeInterval, setTimeInterval] = useState("1H");
@@ -108,7 +108,7 @@ const ChartApiComponent = (props) => {
                 fontSize: "20px",
               }}
             >
-              {`${location.state.coinData.name}`} to USD Chart
+              {`${location.state.coinData? location.state.coinData.name : 'bitcoin'}`} to USD Chart
             </p>
             {/* <Text text="Bitcoin to USD Chart"/> */}
             <div>

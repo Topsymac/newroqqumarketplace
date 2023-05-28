@@ -19,7 +19,11 @@
 }
 .left-container {
   width: 35%; 
+  margin-bottom: 30px;
 }
+/* .left-container-breadcrumb{
+  margin-top: -40px;
+} */
 @media (max-width: 600px) {
   .left-container {
     width: 100%;
@@ -29,12 +33,21 @@
   font-size: 14px;
   display: flex;
   align-items: center;
+  text-transform: capitalize;
+  color: gray;
+  gap: 0.7rem;
+
 }
 .cryptocurrencies {
   color: gray;
+  
+
 }
 .coins {
   color: gray;
+}
+.breadcrumb-bitcoin{
+  color: #222531;
 }
 .bitcoin-asset {
   display: flex;
@@ -54,6 +67,7 @@
   background-color: #f0f2f5;
   padding: 5px;
   font-size: 12px;
+  text-transform: uppercase;
 }
 .asset-notification {
   display: none;
@@ -81,17 +95,25 @@
   padding: 6px 7px 6px 7px;
   border: 0.5px solid grey;
 }
+.follow-icon{
+  justify-content: center;
+  display: flex;
+  /* color: #ea3943; */
+}
 .rank-section {
   display: flex;
   align-items: center;
   column-gap: 5px;
+  /* margin-top: 5px; */
 }
 .rank {
   border: none;
   border-radius: 5px;
-  background-color: gray;
+  /* background-color: gray; */
   color: #fff;
   font-size: 10px;
+  padding: 10px;
+  /* color: #666872; */
 }
 .coin {
   border: none;
@@ -307,6 +329,14 @@
 .market-sub {
   padding: 0 0 0 1rem;
 }
+.vol-cex-container{
+  display: flex;
+  justify-content: space-between;
+}
+.vol-cex{
+  display: flex;
+  column-gap: 1rem;
+}
 /* RIGHT CONTAINER */
 .right-container {
   width: 65%;
@@ -330,6 +360,10 @@
   font-size: small;
   color: gray;
   margin-top: 70px;
+}
+.btc-prices{
+  text-transform: uppercase;
+
 }
 .btc-price {
   display: flex;
@@ -395,7 +429,7 @@
   color: red;
 }
 .market-arrow-up-button {
-  width: 100px;
+  width: 100%;
   border: none;
   height: 5px;
   background-color: gray;
@@ -451,6 +485,9 @@
   column-gap: 10px;
   flex-wrap: wrap;
   row-gap: .7rem;
+  margin-top: -40px;
+  padding-bottom: 40px;
+  /* border-bottom: 1px solid #EFF2F5;   */
 }
 @media (max-width: 600px) {
   .button-list {
@@ -559,6 +596,7 @@
 }
 .more-stats-one {
   align-items: center;
+  cursor: pointer;
 }
 
 .rank-section {
@@ -763,7 +801,7 @@
     background-color: #dddfe6;
     padding: 0.2rem;
     border-radius: 5px;
-    margin-left: 100px;  
+    margin-left: 95px;  
     display: flex;
     align-items: center;
     font-size: 12px;
@@ -771,7 +809,7 @@
 
  .website-links{
     column-gap: 150px;
-    font-size: 14.5px;
+    font-size: 14px;
   }  
   .website-link{
     color: grey;

@@ -1,5 +1,6 @@
 .card-container {
   padding: 35px;
+  overflow-x: scroll;
 }
 .sub-card-container {
   display: flex;
@@ -24,13 +25,13 @@
 .card-top {
   display: flex;
   column-gap: 1.5rem;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 .card-token-img {
   width: 40px;
   height: 40px;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   display: flex;
 }
 .card-token {
@@ -88,11 +89,21 @@
     display: none;
   }
   .card-token-img {
-    position: absolute;
+    /* position: absolute; */
   }
   .card-token {
     position: relative;
-    margin-top: 40px;
+    margin-top: 7px;
     padding: 0 18px 0 18px;
   }
+  .card-top{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    /* background-color: red !important; */
+    /* row-gap: 1rem !important; */
+    /* border: 1px solid green; */
+  }
+
 }
