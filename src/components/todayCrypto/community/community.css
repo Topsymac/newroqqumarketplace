@@ -7,7 +7,7 @@
 @media screen and (min-width: 992px) {
   .community {
     /* width: 33%; */
-    /* width: 448px; */
+    width: 448px;
     height: 200px;
     padding: 16px;
     /* box-shadow: rgba(88, 102, 126, 0.08) 0px 4px 24px,
@@ -20,7 +20,7 @@
   .community {
     /* width: 33%; */
     /* width: 448px; */
-    width: 400px;
+    width: 370px;
     height: 200px;
     padding: 15px;
     border-radius: 8px;
@@ -40,6 +40,63 @@
     -ms-border-radius: 100% !important;
     -o-border-radius: 100% !important;
 }
+
+.community__logoText{
+  /* padding-top: 2px; */
+  margin-left: 28px;
+}
+
+.community__slider{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* item 1  */
+.community__header{
+  display: flex;
+  align-items: baseline;
+}
+.community__post{
+  margin-left: 10px;
+}
+
+.community__likes-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* item 2 */
+.community__article-hello{
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.community__article-likes-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+/* item 3  */
+.community__community-account{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.community__community-account-div{
+  display: flex;
+  align-items: center;
+}
+
+
+
 }
 
 .community__likes{
@@ -67,6 +124,8 @@
 .slick-dots  button:before{
   color:#A6B0C3 !important;
   font-size: 10px !important;
+  margin-top: 17px;
+
 }
 .slick-dots  button:hover:before{
   color:#3861FB !important;

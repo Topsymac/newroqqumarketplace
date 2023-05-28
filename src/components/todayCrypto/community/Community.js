@@ -26,8 +26,8 @@ const Community = () => {
     slidesToScroll: 1,
     autoplaySpeed: 2000,
     arrows: false,
+    autoplay: true,
   };
-  // autoplay: true,
 
   return (
     <>
@@ -35,8 +35,13 @@ const Community = () => {
         className="community"
         style={{
           backgroundColor: theme === "Light" ? "#FFF" : "#323546 ",
-          boxShadow: theme === "Light" ? ["rgba(88, 102, 126, 0.08) 0px 4px 24px",
-      "rgba(88, 102, 126, 0.12) 0px 1px 2px"]:""
+          boxShadow:
+            theme === "Light"
+              ? [
+                  "rgba(88, 102, 126, 0.08) 0px 4px 24px",
+                  "rgba(88, 102, 126, 0.12) 0px 1px 2px",
+                ]
+              : "",
         }}
       >
         <Slider {...settings}>
@@ -45,9 +50,9 @@ const Community = () => {
             <div>
               <div>
                 <div>
-                  <div className="">
-                    <div className="d-flex justify-content-between align-items-center mb-2">
-                      <div className="d-flex align-items-baseline">
+                  <div>
+                    <div className="community__slider">
+                      <div className="community__header">
                         <div>
                           <i
                             className="fa fa-star"
@@ -55,7 +60,7 @@ const Community = () => {
                             style={{ color: "gold" }}
                           ></i>
                         </div>
-                        <div className="mx-3">
+                        <div className="community__post">
                           <b style={{ fontWeight: "bold", fontSize: "17px" }}>
                             <Text text="Top Community Post" />
                           </b>
@@ -71,9 +76,10 @@ const Community = () => {
                           }}
                         >
                           <Link
-                            className="d-flex align-items-center"
                             to="recently-added-coin"
                             style={{
+                              display: "flex",
+                              alignItems: "center",
                               textDecoration: "none",
                               color: "#3861FB",
                               fontWeight: "500",
@@ -81,9 +87,13 @@ const Community = () => {
                           >
                             <Text text="More" />
                             <i
-                              className="fa fa-angle-right mx-2"
+                              className="fa fa-angle-right"
                               aria-hidden="true"
-                              style={{ fontWeight: "bold", fontSize: "12px" }}
+                              style={{
+                                fontWeight: "bold",
+                                fontSize: "12px",
+                                marginLeft: "5px",
+                              }}
                             ></i>
                           </Link>
                         </div>
@@ -94,25 +104,35 @@ const Community = () => {
                         <img
                           src={theme === "Dark" ? Logo : Logo}
                           alt="Logo"
-                          style={{ width: "90px", height: "20px" }}
+                          style={{
+                            width: "90px",
+                            height: "20px",
+                            marginTop: "15px",
+                          }}
                         />
                         <div
-                          className="guestPost__logoText"
+                          className="community__logoText"
                           style={{
                             color: theme === "Light" ? "#A6B0C3" : "#7E859B ",
-                            marginLeft: "30px",
+                            // marginLeft: "30px",
                             fontWeight: "500",
                           }}
                         >
                           <Text text="3.1M followers" />
                         </div>
                       </div>
-                      <p className="my-1 mx-4">
+                      <p
+                        style={{
+                          marginTop: "5px",
+                          marginLeft: "25px",
+                          fontSize: "16px",
+                        }}
+                      >
                         Nigerian crypto exchange Roqqu receives European virtual
                         currency license...
                       </p>
                       <div className="community__likes">
-                        <div className="d-flex justify-content-between align-items-center">
+                        <div className="community__likes-div">
                           <div className="">
                             {/* <i className="fa-solid fa-retweet"></i> */}
                             <span
@@ -120,6 +140,7 @@ const Community = () => {
                               style={{
                                 color:
                                   theme === "Light" ? "#A6B0C3" : "#7E859B ",
+                                marginLeft: "0.3rem",
                               }}
                             >
                               May 15
@@ -131,10 +152,10 @@ const Community = () => {
                               style={{ fontSize: "5px", height: "15px" }}
                             ></i>
                           </div>
-                          <div className="mx-1">
+                          <div style={{ marginLeft: "0.1rem" }}>
                             <i className="fa-regular fa-comment-dots"></i>
                             {/* <IoChartboxEllipses /> */}
-                            <span className="mx-1">75</span>
+                            <span style={{ marginLeft: "0.3rem" }}>75</span>
                           </div>
                           <div>
                             <i
@@ -143,9 +164,9 @@ const Community = () => {
                             ></i>
                           </div>
 
-                          <div className="mx-1">
+                          <div style={{ marginLeft: "0.1rem" }}>
                             <i className="fa-solid fa-heart"></i>
-                            <span className="mx-1">351</span>
+                            <span style={{ marginLeft: "0.3rem" }}>351</span>
                           </div>
                         </div>
                       </div>
@@ -166,8 +187,8 @@ const Community = () => {
                       backgroundColor: theme === "Light" ? "#FFF" : "#323546 ",
                     }}
                   >
-                    <div className="d-flex justify-content-between align-items-center mb-3">
-                      <div className="d-flex align-items-baseline">
+                    <div className="community__slider">
+                      <div className="community__header">
                         <div>
                           <i
                             className="fa fa-star"
@@ -175,7 +196,7 @@ const Community = () => {
                             style={{ color: "gold" }}
                           ></i>
                         </div>
-                        <div className="mx-3">
+                        <div className="community__post">
                           <b style={{ fontWeight: "bold", fontSize: "17px" }}>
                             <Text text="Top Community Article" />
                           </b>
@@ -185,9 +206,10 @@ const Community = () => {
                       <div>
                         <div style={{ fontWeight: "bold", fontSize: "12px" }}>
                           <Link
-                            className="d-flex align-items-center"
                             to="recently-added-coin"
                             style={{
+                              display: "flex",
+                              alignItems: "center",
                               textDecoration: "none",
                               color: "#3861FB",
                               fontWeight: "500",
@@ -197,13 +219,17 @@ const Community = () => {
                             <i
                               className="fa fa-angle-right mx-2"
                               aria-hidden="true"
-                              style={{ fontWeight: "bold", fontSize: "12px" }}
+                              style={{
+                                fontWeight: "bold",
+                                fontSize: "12px",
+                                marginLeft: "5px",
+                              }}
                             ></i>
                           </Link>
                         </div>
                       </div>
                     </div>
-                    <div className="d-flex">
+                    <div style={{ display: "flex", marginTop: "15px" }}>
                       <div>
                         <img
                           src={communityArticleImg}
@@ -216,7 +242,7 @@ const Community = () => {
                       </div>
                       <div>
                         <div>
-                          <div className="d-flex align-items-center mx-3">
+                          <div className="community__article-hello">
                             <img
                               src={
                                 theme === "Dark"
@@ -236,19 +262,25 @@ const Community = () => {
                               style={{
                                 color:
                                   theme === "Light" ? "#6C788D" : "#A1A7BB",
+                                marginLeft: "5px",
                               }}
                             >
                               <Text text="HELLO" />
                             </div>
                           </div>
                           <p
-                            className="mt-2 mx-3 w-80"
-                            style={{ fontSize: "15px", marginBottom: "0px" }}
+                            style={{
+                              fontSize: "15px",
+                              marginBottom: "0px",
+                              marginTop: "10px",
+                              marginLeft: "15px",
+                              width: "80%",
+                            }}
                           >
                             How Roqqu selects which killer project make the snow
                           </p>
                           <div className="community__article-likes">
-                            <div className="d-flex justify-content-between align-items-center">
+                            <div className="community__article-likes-div">
                               <div>
                                 {/* <i className="fa-solid fa-retweet"></i> */}
                                 <span
@@ -262,16 +294,16 @@ const Community = () => {
                                   May 5
                                 </span>
                               </div>
-                              <div className="mx-1">
+                              <div style={{ marginLeft: "0.3rem" }}>
                                 <i
                                   className="fa-solid fa-circle"
                                   style={{ fontSize: "5px", height: "15px" }}
                                 ></i>
                               </div>
-                              <div className="mx-1">
+                              <div style={{ marginLeft: "0.3rem" }}>
                                 <i className="fa-regular fa-comment-dots"></i>
                                 {/* <IoChartboxEllipses /> */}
-                                <span className="mx-1">2</span>
+                                <span style={{ marginLeft: "0.3rem" }}>2</span>
                               </div>
                               <div>
                                 <i
@@ -280,9 +312,9 @@ const Community = () => {
                                 ></i>
                               </div>
 
-                              <div className="mx-1">
+                              <div style={{ marginLeft: "0.3rem" }}>
                                 <i className="fa-solid fa-heart"></i>
-                                <span className="mx-1">1</span>
+                                <span style={{ marginLeft: "0.3rem" }}>1</span>
                               </div>
                               <div
                                 style={{
@@ -292,7 +324,12 @@ const Community = () => {
                                   padding: "4px 8px",
                                 }}
                               >
-                                <div className="d-flex align-items-center">
+                                <div
+                                  style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                  }}
+                                >
                                   <img
                                     src={
                                       theme === "Dark"
@@ -304,15 +341,17 @@ const Community = () => {
                                       width: "15px",
                                       height: "15px",
                                       borderRadius: "100%",
+                                      position: "relative",
+                                      top: "1px",
                                     }}
                                   />
                                   {/* <i className="fa-sharp fa-solid fa-badge-check"></i> */}
                                   <div
-                                    className="mx-1"
                                     style={{
                                       color:
                                         theme === "Light" ? "black" : "white",
                                       fontWeight: "bold",
+                                      marginLeft: "0.3rem",
                                     }}
                                   >
                                     <Text text="HELLO" />
@@ -340,8 +379,8 @@ const Community = () => {
                       backgroundColor: theme === "Light" ? "#FFF" : "#323546 ",
                     }}
                   >
-                    <div className="d-flex justify-content-between align-items-center mb-3">
-                      <div className="d-flex align-items-baseline">
+                    <div className="community__slider">
+                      <div className="community__header">
                         <div>
                           <i
                             className="fa fa-star"
@@ -349,7 +388,7 @@ const Community = () => {
                             style={{ color: "gold" }}
                           ></i>
                         </div>
-                        <div className="mx-3">
+                        <div className="community__post">
                           <b style={{ fontWeight: "bold", fontSize: "17px" }}>
                             <Text text="Top Community Accounts" />
                           </b>
@@ -359,9 +398,10 @@ const Community = () => {
                       <div>
                         <div style={{ fontWeight: "bold", fontSize: "12px" }}>
                           <Link
-                            className="d-flex align-items-center"
                             to="recently-added-coin"
                             style={{
+                              display: "flex",
+                              alignItems: "center",
                               textDecoration: "none",
                               color: "#3861FB",
                               fontWeight: "500",
@@ -369,16 +409,20 @@ const Community = () => {
                           >
                             <Text text="More" />
                             <i
-                              className="fa fa-angle-right mx-2"
+                              className="fa fa-angle-right"
                               aria-hidden="true"
-                              style={{ fontWeight: "bold", fontSize: "12px" }}
+                              style={{
+                                fontWeight: "bold",
+                                fontSize: "12px",
+                                marginLeft: "5px",
+                              }}
                             ></i>
                           </Link>
                         </div>
                       </div>
                     </div>
-                    <div className="d-flex align-items-center justify-content-between my-2">
-                      <div className="d-flex align-items-center">
+                    <div className="community__community-account">
+                      <div className="community__community-account-div">
                         <div>
                           <img
                             src={communityAccount1}
@@ -390,18 +434,28 @@ const Community = () => {
                           />
                         </div>
                         <div>
-                          <div className="d-flex mx-2 align-items-center">
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              marginLeft: "5px",
+                              // marginTop: "5px",
+                            }}
+                          >
                             <div
                               style={{ fontSize: "14px", fontWeight: "500" }}
                             >
                               <Text text="Roqqu" />
                             </div>
-                            <div className="mx-1">
+                            <div style={{ marginLeft: "0.3rem" }}>
                               <img src={certifiedIcon} alt="" />
                             </div>
                             <div
-                              className="text-secondary"
-                              style={{ fontSize: "12px" }}
+                              style={{
+                                fontSize: "12px",
+                                color: "#A6B0C3",
+                                marginLeft: "0.3rem",
+                              }}
                             >
                               <Text text="@roqqupay" />
                             </div>
@@ -414,9 +468,12 @@ const Community = () => {
                           text="Follow"
                           // height="30"
                           // width="60"
-                          paddingRight="23"
-                          paddingLeft="23"
+                          paddingTop="8"
+                          paddingBottom="10"
+                          paddingRight="25"
+                          paddingLeft="25"
                           textFontsize="12"
+                          borderRadius="5"
                           //   color="#3861FB"
                           BGcolor={theme === "Light" ? "#E6E9EC" : "#222531"}
                           textColor={theme === "Light" ? "black" : "white"}
@@ -429,8 +486,20 @@ const Community = () => {
                       </div>
                     </div>
                     {/*  */}
-                    <div className="d-flex align-items-center justify-content-between my-2">
-                      <div className="d-flex">
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        marginTop: "5px",
+                        marginLeft: "5px",
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: "flex",
+                        }}
+                      >
                         <div>
                           <img
                             src={communityAccount2}
@@ -441,16 +510,25 @@ const Community = () => {
                             }}
                           />
                         </div>
-                        <div className="d-flex mx-2 align-items-center">
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            marginLeft: "5px",
+                          }}
+                        >
                           <div style={{ fontSize: "14px", fontWeight: "500" }}>
                             <Text text="Roqqu" />
                           </div>
-                          <div className="mx-1">
+                          <div style={{ marginLeft: "0.3rem" }}>
                             <img src={certifiedIcon} alt="" />
                           </div>
                           <div
-                            className="text-secondary"
-                            style={{ fontSize: "12px" }}
+                            style={{
+                              fontSize: "12px",
+                              color: "#A6B0C3",
+                              marginLeft: "0.3rem",
+                            }}
                           >
                             <Text text="@roqqupay" />
                           </div>
@@ -460,11 +538,12 @@ const Community = () => {
                         <CommunityBtn
                           fontAwesome="fa fa-plus"
                           text="Follow"
-                          // height="30"
-                          // width="60"
-                          paddingRight="23"
-                          paddingLeft="23"
+                          paddingTop="8"
+                          paddingBottom="10"
+                          paddingRight="25"
+                          paddingLeft="25"
                           textFontsize="12"
+                          borderRadius="5"
                           //   color="#3861FB"
                           BGcolor={theme === "Light" ? "#E6E9EC" : "#222531"}
                           textColor={theme === "Light" ? "black" : "white"}
@@ -477,9 +556,17 @@ const Community = () => {
                       </div>
                     </div>
                     {/*  */}
-                    <div className="d-flex align-items-center justify-content-between">
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        marginLeft: "5px",
+                        marginTop: "5px",
+                      }}
+                    >
                       <div>
-                        <div className="d-flex">
+                        <div style={{ display: "flex" }}>
                           <div>
                             <img
                               src={communityAccount3}
@@ -491,18 +578,27 @@ const Community = () => {
                             />
                           </div>
                           <div>
-                            <div className="d-flex mx-2 align-items-center">
+                            <div
+                              style={{
+                                display: "flex",
+                                alignItems: "center",
+                                marginLeft: "5px",
+                              }}
+                            >
                               <div
                                 style={{ fontSize: "14px", fontWeight: "500" }}
                               >
                                 <Text text="Roqqu" />
                               </div>
-                              <div className="mx-1">
+                              <div style={{ marginLeft: "0.3rem" }}>
                                 <img src={certifiedIcon} alt="" />
                               </div>
                               <div
-                                className="text-secondary"
-                                style={{ fontSize: "12px" }}
+                                style={{
+                                  fontSize: "12px",
+                                  color: "#A6B0C3",
+                                  marginLeft: "0.3rem",
+                                }}
                               >
                                 <Text text="@roqqupay" />
                               </div>
@@ -515,11 +611,12 @@ const Community = () => {
                           <CommunityBtn
                             fontAwesome="fa fa-plus"
                             text="Follow"
-                            // height="30"
-                            // width="60"
-                            paddingRight="23"
-                            paddingLeft="23"
+                            paddingTop="8"
+                            paddingBottom="10"
+                            paddingRight="25"
+                            paddingLeft="25"
                             textFontsize="12"
+                            borderRadius="5"
                             //   color="#3861FB"
                             BGcolor={theme === "Light" ? "#E6E9EC" : "#222531"}
                             textColor={theme === "Light" ? "black" : "white"}

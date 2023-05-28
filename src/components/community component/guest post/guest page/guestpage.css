@@ -1,9 +1,49 @@
 .guestPage__logoText {
   font-size: 18px;
   font-weight: 600;
+  text-align: center;
+  margin-left: 0.4rem;
 }
 
-.guestPage__user{
-     font-size: 31px;
+.guestPage__user {
+  font-size: 31px;
   font-weight: 600;
+}
+
+.guestPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.guestPage__guest {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guestPage__bullish {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guestPage__btc {
+  color: #3861fb;
+  margin-top: 40px;
+  margin-left: 10px;
+  font-size: 17px;
+}
+.guestPage__icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 0.5rem;
+  margin-top: 20px;
+}
+
+.guestPage__icon-div {
+  display: flex;
+  align-items: center;
 }

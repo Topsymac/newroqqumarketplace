@@ -1,0 +1,10 @@
+.communityBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: unset; */
+}
+
+.communityText{
+    margin-left:0.3rem
+}

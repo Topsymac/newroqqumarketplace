@@ -11,6 +11,7 @@
     }
     .chartApiComponent__chart{
         width: 100%;
+        margin:5px
     }
 }@media screen and (min-width: 576px){}
 @media screen and (min-width: 768px){}
@@ -18,9 +19,23 @@
 @media screen and (min-width: 1200px){
     .chartApiComponent__chart{
         width: 66%;
+        margin: 5px;
     }
     .chartApiComponent__communityComponent{
         margin-top: 0px;
         width:31.5%
     }
+}
+
+.chartApiComponent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    padding: 6px;
+}
+
+.chartApiComponent__lightweight-molecule{
+    margin-top: 25px;
+    margin-bottom: 35px;
 }

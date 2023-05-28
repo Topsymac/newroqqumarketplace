@@ -9,10 +9,10 @@ const BlogPost = () => {
   return (
     <>
       <div
-        className="card w-100 blogPost"
+        className="blogPost"
         style={{
           backgroundColor: theme === "Light" ? "#F8FAFD" : "#171924",
-          borderColor: theme === "Light" ? "#F0F3F6" : "#2C2E3D",
+          border: theme == "Light" ? "1px solid #F0F3F6" : "1px solid #2C2E3D",
         }}
       >
         <div>

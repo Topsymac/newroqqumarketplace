@@ -1,0 +1,31 @@
+@media screen and (min-width: 100px) {
+  .LightweightMolecule__marketNPrice {
+    display: flex;
+    margin-bottom: 0.5rem !important;
+  }
+}
+@media screen and (min-width: 576px) {
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 992px) {
+}
+@media screen and (min-width: 1200px) {
+    .LightweightMolecule__marketNPrice{
+    display: flex;
+    margin-bottom: 0rem !important;
+}
+}
+
+.LightweightMolecule {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.LightweightMolecule__timeInterval{
+    display: flex;
+    align-items: start;
+    justify-content: end;
+}

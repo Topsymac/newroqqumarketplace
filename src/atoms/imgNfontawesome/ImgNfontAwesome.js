@@ -13,7 +13,7 @@ const ImgNfontAwesome = ({
           <img
             src={img}
             alt=""
-            style={{ width: "30px", height:"30px",borderRadius:"100%" }}
+            style={{ width: "30px", height: "30px", borderRadius: "100%" }}
           />
         ) : fontAwesome ? (
           <i

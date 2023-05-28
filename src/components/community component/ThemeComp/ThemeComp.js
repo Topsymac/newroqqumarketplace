@@ -20,7 +20,7 @@ const ThemeComp = ({ firstText, secondText }) => {
           border: theme === "Light" ? "" : "1px solid #2B2E3D",
         }}
       >
-        <div className="d-flex align-items-center justify-content-between">
+        <div className="theme__div">
           <div>
             <p
               onClick={() => {
@@ -67,13 +67,17 @@ const ThemeComp = ({ firstText, secondText }) => {
           </div>
         </div>
       </div>
-      <div className="d-flex justify-content-between align-items-center theme-comp__Link">
+      <div className="theme-comp__Link">
         <div>
-          <Link to="/" className="d-flex align-items-center">
+          <Link to="/" className="theme__link-tag">
             All post
             <i
-              className="fa-solid fa-angle-down mx-1"
-              style={{ fontSize: "12px", paddingTop: "2px" }}
+              className="fa-solid fa-angle-down"
+              style={{
+                fontSize: "12px",
+                paddingTop: "2px",
+                marginLeft: "0.4rem",
+              }}
             ></i>
           </Link>
         </div>
@@ -88,14 +92,11 @@ const ThemeComp = ({ firstText, secondText }) => {
         </div>
       </div>
       <div style={{ color: "white" }}>
-        {
-          changeBGClick === 0 && (
-            <div className="theme-comp__GuestPostPage">
-              <GuestPostPage blogData={Blogdata} />
-            </div>
-          )
-          // <div>something added</div>
-        }
+        {changeBGClick === 0 && (
+          <div className="theme-comp__GuestPostPage">
+            <GuestPostPage blogData={Blogdata} />
+          </div>
+        )}
       </div>
       <div style={{ color: "white" }}>
         {changeBGClick === 1 && (

@@ -1,13 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useLocation } from "react-router";
 import { ChartComponent } from "./ChartComponent";
 import LightweightMolecule from "./lightweight molecule/LightweightMolecule";
 import CommunityComponent from "../community component/CommunityComponent";
 import { formatDate } from "../../utilis/FormatDate";
 // import Text from ""
 
+import { ThemeContext } from "../../context/ThemeContext";
+
 import "./chartapicomponent.css";
 
 const ChartApiComponent = (props) => {
+  const location = useLocation();
+  const coinDataSymbol = location.state.coinData.symbol;
+
   const [prices, setPrices] = useState([]);
   const [timeInterval, setTimeInterval] = useState("1H");
 
@@ -16,7 +22,7 @@ const ChartApiComponent = (props) => {
       try {
         // console.log(timeInterval);
         const response = await fetch(
-          `https://api.roqqu.com/v2/history?symbol=btc&interval=${timeInterval}`
+          `https://api.roqqu.com/v2/history?symbol=${coinDataSymbol}&interval=${timeInterval}`
         );
         const json = await response.json();
         const eachPrice = json.data;
@@ -26,7 +32,7 @@ const ChartApiComponent = (props) => {
           // const timestamp =
           //   timeInterval === "1H" ? date.getTime() / 1000 : date.getTime();
           const value = parseFloat(singlePrice.price) / 1000;
-
+          // console.log(value)
           // const timestamp =
           //   timeInterval === "1H" && timeInterval === "1D"
           //     ? date.getTime()
@@ -64,7 +70,6 @@ const ChartApiComponent = (props) => {
   //   };
   // }, []);
 
-
   // const divElement1 = document.getElementById("chartApiComponent");
 
   // function handleScroll() {
@@ -85,18 +90,29 @@ const ChartApiComponent = (props) => {
 
   // window.addEventListener("scroll", handleScroll);
 
+  const { theme } = useContext(ThemeContext);
+
   return (
     <>
       <div
-        className="d-flex flex-wrap justify-content-between align-items-start m-3 chartApiComponent"
+        className="chartApiComponent"
         id="chartApiComponent"
+        style={{ backgroundColor: theme === "Dark" ? "#161722" : "white"}}
       >
         <div className="chartApiComponent__chart">
           <div>
-            <p style={{ fontWeight: "bold" }}>Bitcoin to USD Chart</p>
+            <p
+              style={{
+                color: theme === "Dark" ? "white" : "",
+                fontWeight: "bold",
+                fontSize: "20px",
+              }}
+            >
+              {`${location.state.coinData.name}`} to USD Chart
+            </p>
             {/* <Text text="Bitcoin to USD Chart"/> */}
             <div>
-              <div className="my-3">
+              <div className="chartApiComponent__lightweight-molecule">
                 <LightweightMolecule
                   onClickProp={(par) => {
                     setTimeInterval(par);
@@ -125,9 +141,7 @@ const ChartApiComponent = (props) => {
           </div>
         </div>
         <div
-          className="chartApiComponent__communityComponent"
-          id="communityComponent"
-        >
+          className="chartApiComponent__communityComponent">
           <CommunityComponent />
         </div>
       </div>

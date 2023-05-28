@@ -1,25 +1,35 @@
-import React from "react";
-import LightweightButton from "../lightweight button/LightweightButton";
+import React, { useContext } from "react";
 import { useState } from "react";
+import LightweightButton from "../lightweight button/LightweightButton";
 import LightweightPriceBtn from "../lightweight price/LightweightPriceBtn";
+import { ThemeContext } from "../../../context/ThemeContext";
+
+import "./lightweightmolecule.css";
 
 const LightweightMolecule = ({ onClickProp }) => {
+  const { theme } = useContext(ThemeContext);
+
   const [activeButton, setActiveButton] = useState("1H");
   const [timeInterval, setTimeInterval] = useState("1H");
   return (
     <>
-      <div className="d-flex flex-wrap justify-content-between align-items-center">
+      <div className="LightweightMolecule">
         <div
-          className="d-flex mb-2 mb-xl-0"
+          className="LightweightMolecule__marketNPrice"
           style={{
-            backgroundColor: "#EFEFEF",
+            backgroundColor: theme === "Light" ? "#EFEFEF" : "#313445",
             padding: "4px",
             borderRadius: "10px",
             paddingLeft: "3px",
           }}
         >
-          <div style={{ backgroundColor: "white", borderRadius: "10px" }}>
-            <LightweightPriceBtn lightweightPriceBtn="Price" white />
+          <div
+            style={{
+              backgroundColor: theme === "Light" ? "white" : "#0D1421",
+              borderRadius: "10px",
+            }}
+          >
+            <LightweightPriceBtn lightweightPriceBtn="Price" />
           </div>
           <div>
             <LightweightPriceBtn lightweightPriceBtn="Market Cap" />
@@ -29,9 +39,9 @@ const LightweightMolecule = ({ onClickProp }) => {
           </div>
         </div>
         <div
-          className="d-flex justify-content-end"
+          className="LightweightMolecule__timeInterval"
           style={{
-            backgroundColor: "#EFEFEF",
+            backgroundColor: theme === "Light" ? "#EFEFEF" : "#313445",
             padding: "3px",
             borderRadius: "10px",
             paddingLeft: "3px",
@@ -115,14 +125,15 @@ const LightweightMolecule = ({ onClickProp }) => {
               height: "18px",
             }}
           ></div>
-          <div className="mx-1"
-          // style={{
-          //   position:"relative",
-          //   top:"20px",
-          //   borderLeft: "1px solid #5d6b82",
-          //   borderRight: "1px solid #5d6b82",
-          //   height:"15px"
-          // }}
+          <div
+            className="mx-1"
+            // style={{
+            //   position:"relative",
+            //   top:"20px",
+            //   borderLeft: "1px solid #5d6b82",
+            //   borderRight: "1px solid #5d6b82",
+            //   height:"15px"
+            // }}
           >
             <LightweightButton fontAwesome="fa fa-calendar" />
           </div>
@@ -133,6 +144,7 @@ const LightweightMolecule = ({ onClickProp }) => {
               borderLeft: "1px solid #5d6b82",
               // borderRight: "1px solid #5d6b82",
               height: "18px",
+              marginRight: "4px",
             }}
           ></div>
           <div>

@@ -1,7 +1,5 @@
-.communityComponent__card > .card {
+.communityComponent__card {
   padding: 0px;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
 }
 
 .communityComponent__Header {
@@ -10,6 +8,8 @@
 }
 
 .communityComponent__Link {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 12px;
   text-decoration: none;
@@ -17,9 +17,21 @@
 }
 
 .communityComponent__guestPost {
+  /*border: 1px solid #F0F3F6;
+  */
+  /* width: 100%; */
   border-bottom: 0px !important;
   border-bottom-left-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
-  border-color: #F0F3F6 !important;
+  /*border-color: #F0F3F6 !important;
+  */
+  border-radius: 13px;
 }
 
+.communityComponent__div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

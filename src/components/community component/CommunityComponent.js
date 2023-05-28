@@ -14,21 +14,25 @@ const CommunityComponent = () => {
       <div>
         <div className="communityComponent">
           <div classame="">
-            <div className="d-flex justify-content-between align-items-center mb-2">
+            <div
+              className="communityComponent__div"
+              style={{ color: theme === "Dark" ? "white" : "" }}
+            >
               <div className="communityComponent__Header">
                 <Text text="Community" />
               </div>
               <div>
                 <div style={{ fontWeight: "bold", fontSize: "12px" }}>
-                  <Link
-                    className="d-flex align-items-center communityComponent__Link"
-                    to="/"
-                  >
+                  <Link className="communityComponent__Link" to="/">
                     <Text text="View on Community" />
                     <i
-                      className="fa fa-angle-right mx-2"
+                      className="fa fa-angle-right"
                       aria-hidden="true"
-                      style={{ fontWeight: "bold", fontSize: "12px" }}
+                      style={{
+                        fontWeight: "bold",
+                        fontSize: "12px",
+                        marginLeft: "7px",
+                      }}
                     ></i>
                   </Link>
                 </div>
@@ -36,16 +40,26 @@ const CommunityComponent = () => {
             </div>
           </div>
           <div className="communityComponent__card">
-            <div className="card w-100 communityComponent__guestPost">
-              <GuestPost />
-            </div>
             <div
+              className="communityComponent__guestPost"
               style={{
-                backgroundColor: theme === "Light" ? "#EFF2F5" : "#171924 !important",
+                border:
+                  theme == "Light" ? "1px solid #F0F3F6" : "1px solid #2C2E3D",
+                backgroundColor: theme == "Light" ? "#F0F3F6" : "#2C2E3D",
+                // borderRadius: "13px",
               }}
             >
+              <GuestPost />
+            </div>
+            <div>
               <BlogPost firstText="top" secondText="latest" />
             </div>
+            {/* style=
+            {{
+              backgroundColor:
+                theme === "Light" ? "#EFF2F5" : "#171924 !important",
+              // borderRadius: "13px",
+            }} */}
           </div>
         </div>
       </div>

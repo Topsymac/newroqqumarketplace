@@ -1,6 +1,28 @@
 .GuestPostUser {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  margin-left: 20px;
   color: black;
-  width: 100%;
+  width: 92%;
+  /* overflow: hidden; */
+}
+.GuestPostUser__div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.GuestPostUser__name-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.GuestPostUser__socials-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .GuestPostUser__fa-comment-dots {
@@ -62,6 +84,11 @@
   padding: 10px 20px;
   margin: 2px;
 }
+.GuestPostUser__drop-icon{
+  color: #808a9d !important;
+  position: relative;
+  top: 2px;
+}
 
 .GuestPostUser__drop-icon:hover {
   color: #3861fa !important;
@@ -80,24 +107,31 @@
   border-left-color: transparent;
 }
 
-@media screen and (min-width: 100px){
-  .GuestPostUser__socials{
-    margin-right: 150px;
-  }
-}@media screen and (min-width: 576px){
-  .GuestPostUser__socials{
-    margin-right: 150px;
-    width: 50%;
+@media screen and (min-width: 100px) {
+  .GuestPostUser__socials {
+    margin-top: 15px;
+    margin-right: 100px;
   }
 }
-@media screen and (min-width: 768px){}
-@media screen and (min-width: 992px){
-  .GuestPostUser__socials{
+@media screen and (min-width: 576px) {
+  .GuestPostUser__socials {
+    margin-right: 150px;
+    width: 200px;
+  }
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 992px) {
+  .GuestPostUser__socials {
     margin-right: 250px;
+    color: #808a9d;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 10px;
   }
 }
-@media screen and (min-width: 1200px){
-  .GuestPostUser__socials{
+@media screen and (min-width: 1200px) {
+  .GuestPostUser__socials {
     width: unset;
     margin-right: 150px;
   }

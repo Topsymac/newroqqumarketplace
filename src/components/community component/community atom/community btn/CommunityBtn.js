@@ -1,39 +1,44 @@
 import React from "react";
+import "./communitybtn.css";
 import Text from "../../../../atoms/text/Text";
 
 const CommunityBtn = ({
-  img="",
-  height="",
-  width="",
-  fontAwesome="",
-  text="",
-  BGcolor="",
-  textFontsize="",
-  textColor="",
-  FontawesomeColor="",
-  FontawesomeFontsize="",
-  textFontWeight="",
-  padding="",
-  paddingLeft="",
-  paddingRight="",
-  margin="",
-  border="",
-  borderRadius="",
+  img = "",
+  height = "",
+  width = "",
+  fontAwesome = "",
+  text = "",
+  BGcolor = "",
+  textFontsize = "",
+  textColor = "",
+  FontawesomeColor = "",
+  FontawesomeFontsize = "",
+  textFontWeight = "",
+  padding = "",
+  paddingLeft = "",
+  paddingRight = "",
+  margin = "",
+  border = "",
+  borderRadius = "",
+  paddingBottom = "",
+  paddingTop = "",
 }) => {
   return (
     <>
-      <button
-        className="btn d-flex align-items-center justify-content-between"
+      <px
+        className="communityBtn btn"
         style={{
           width: `${width}px`,
           height: `${height}px`,
           backgroundColor: `${BGcolor}`,
           padding: `${padding}px`,
+          paddingTop: `${paddingTop}px`,
+          paddingBottom: `${paddingBottom}px`,
           paddingLeft: `${paddingLeft}px`,
           paddingRight: `${paddingRight}px`,
           margin: `${margin}`,
-          border:`${border}`,
-          borderRadius:`${borderRadius}`
+          border: `${border}`,
+          borderRadius: `${borderRadius}px`,
           // padding:"7px 30px",
         }}
       >
@@ -51,7 +56,7 @@ const CommunityBtn = ({
           ""
         )}
         <div
-          className={text ? "mx-1" : ""}
+          className={text ? "communityText" : ""}
           style={{
             fontSize: `${textFontsize}px`,
             color: `${textColor}`,
@@ -60,7 +65,7 @@ const CommunityBtn = ({
         >
           <Text text={text} />
         </div>
-      </button>
+      </px>
     </>
   );
 };

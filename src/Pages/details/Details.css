@@ -8,3 +8,7 @@
     width: 100%;
     margin: 0 auto;
 }
+.details__horizontal-line{
+    height: 1px;
+    /* width: 100%; */
+}

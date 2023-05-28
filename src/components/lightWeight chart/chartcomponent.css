@@ -59,3 +59,13 @@
   width: 0.7rem;
   background-color: #16C784;
 }
+
+.chartComponent__lightMode > div >.tv-lightweight-charts > table > tr:nth-child(1) > td:nth-child(2) {
+  border: 1px solid #eff2f5 !important;
+}
+
+.chartComponent__darkMode> div >.tv-lightweight-charts > table > tr:nth-child(1) > td:nth-child(2){
+  border: 1px solid #2C2E3D !important
+}
+
+

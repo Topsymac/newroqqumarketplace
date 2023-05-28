@@ -7,7 +7,6 @@ import RecentlyAdded from "./recentlyAdded/RecentlyAdded";
 import Community from "./community/Community";
 import { ThemeContext } from "../../context/ThemeContext";
 
-
 const TodayCrypto = () => {
   const { theme } = useContext(ThemeContext);
 
@@ -38,17 +37,24 @@ const TodayCrypto = () => {
             <span className="text-secondary">
               <b>$1.21T</b>
             </span>
-            , a <IoMdArrowDropdown color="red" fontSize="20px" />
-            <span className="text-danger">
-              <b>0.24%</b>
-            </span>{" "}
+            , a{" "}
+            <span style={{ color: "red" }}>
+              <IoMdArrowDropdown
+                color="red"
+                fontSize="20px"
+                style={{ position: "relative", top: "6px" }}
+              />
+              <span className="text-danger">
+                <b>0.24%</b>
+              </span>
+            </span>
             decrease over the last day.{" "}
-            <a href="ggg" className="text-secondary" style={{ fontSize: "16px" }}>
+            <a href="#" className="text-secondary" style={{ fontSize: "16px" }}>
               Read More
             </a>
           </p>
         </div>
-        <div className="d-none d-xl-flex flex-wrap justify-content-between align-items-center todayCard ">
+        <div className="todayCrypto__trendingToken">
           <div>
             <TrendingToken />
           </div>

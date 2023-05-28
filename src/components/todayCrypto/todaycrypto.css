@@ -1,8 +1,3 @@
-.todayCard {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 @media screen and (min-width: 100px) {
   .todayCrypto {
     padding: 20px;
@@ -12,8 +7,11 @@
     font-weight: bold;
     font-size: 20px;
   }
-  .todayCrypto__paragraph {
+  .todayCrypto__paragraph{
     font-size: 15px;
+  }
+  .todayCrypto__trendingToken{
+    display: none;
   }
 }
 @media screen and (min-width: 576px) {
@@ -26,12 +24,19 @@
   .todayCrypto {
     padding: 20px;
     background-color: #fafbfe;
+    /* width: 100vw; */
   }
   .todayCrypto__header {
     font-weight: bold;
     font-size: 25px;
   }
-  .todayCrypto__paragraph {
+  .todayCrypto__paragraph{
     font-size: 15px;
+  }
+  .todayCrypto__trendingToken{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
   }
 }

@@ -18,14 +18,6 @@ function App() {
       element: <Details />,
     },
     {
-      path: "/trending-cryptocurrency",
-      element: <TrendingTokenPage />,
-    },
-    {
-      path: "/recently-added-coin",
-      element: <RecentlyAddedTokenPage />,
-    },
-    {
       path: "/chart",
       element: <ChartApiComponent />,
     },

@@ -1,34 +1,39 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { formatDate } from "../../utilis/FormatDate";
+// import { ChartThemeChanger } from "./chart theme changer/ChartThemeChanger";
 
-import { createChart, ColorType,} from "lightweight-charts";
+import { createChart, ColorType } from "lightweight-charts";
+import { ThemeContext } from "../../context/ThemeContext";
+
 import "./chartcomponent.css";
 
 export const ChartComponent = ({ data, colors, timeInterval }) => {
-  // useEffect(() => {
-  //   console.log({ data })
-  // });
-  // const [circle, setCircle] = useState("circle");
-  // const [circle2, setCircle2] = useState("circle2");
-  const { backgroundColor} = colors;
+  const { theme } = useContext(ThemeContext);
+
+  // const openPrice = data && data[0] > 0 && data[0].value;
+  const openPrice = data && data[0] && data[0].value;
+  const baseValue = parseInt(openPrice);
+
+  const { backgroundColor } = colors;
 
   const chartContainerRef = useRef();
+  const chartRef = useRef();
+  const handleResize = () => {
+    chartRef.current.applyOptions({
+      width: chartContainerRef.current.clientWidth,
+    });
+  };
+
+  // const myPriceFormatter = (data)=>{
+  //   if (data > 1000) {
+  //     data.toFixed(2) + "k";
+  //   } else {
+  //     data.toFixed(2) + "$";
+  //   }
+  // };
 
   useEffect(() => {
-    const handleResize = () => {
-      // chart.applyOptions({ width: 400, height: 400 });
-      chart.applyOptions({ width: chartContainerRef.current.clientWidth });
-      // chart.timeScale().fitContent();
-    };
-
-    // function formattedNum(data) {
-    //   console.log(data + "ssssss");
-    //   return data + "sssssssss";
-    // }
-
-    // formattedNum(data)
-
-    const chart = createChart(chartContainerRef.current, {
+    chartRef.current = createChart(chartContainerRef.current, {
       layout: {
         background: { type: ColorType.Solid, color: backgroundColor },
         textColor: "#808A9D",
@@ -36,71 +41,49 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
         borderVisible: true,
       },
       width: chartContainerRef.current.clientWidth,
-      // width: 700,
+      // height: chartContainerRef.current.clientHeight,
       height: 400,
       timeScale: {
         secondsVisible: true,
-        // timeVisible: true,
         visible: true,
         borderVisible: true,
         minBarSpacing: 2,
         lockVisibleTimeRangeOnResize: true,
       },
-      // timeScale: {
-      //   // // Set the minimum bar spacing to 1 day
-      //   // minBarSpacing: 86400,
-      //   // // Set the maximum bar spacing to 1 week
-      //   // maxBarSpacing: 604800,
-      //   minBarSpacing: 2,
-      //   lockVisibleTimeRangeOnResize: true,
-      //   borderVisible: true,
-      // },
       localization: {
-        priceFormatter: (data) => data.toFixed(2) + "k",
+        priceFormatter: (data) =>
+          data > 1 ? data.toFixed(2) + "k" : data.toFixed(2) + "$",
       },
     });
     // Set the price scale to the left-hand side
-    chart.applyOptions({
+    chartRef.current.applyOptions({
       leftPriceScale: {
         visible: true,
         lockVisibleTimeRangeOnResize: true,
-        borderColor: "#EFF2F5",
-        // scaleMargins: {
-        //   top: 0.2,
-        //   bottom: 0,
-        // },
       },
       rightPriceScale: {
         visible: false,
         lockVisibleTimeRangeOnResize: true,
       },
       priceScale: {
+        // minMove: 0.00001,
         lockVisibleTimeRangeOnResize: true,
         // mode: 1, // set to "price" mode
         autoScale: false, // turn off auto scaling
         invertScale: false, // set to false for normal scale
         alignLabels: true, // align labels to the right side
         borderVisible: true, // turn on border
-        borderColor: "#EFF2F5", // set border color
-        // scaleMargins: {
-        //   top: 0.3,
-        //   bottom: 0.25,
-        // }, // set margins for price scale
-        // Add your own prices list here
-        // prices:prices,
+        lockScale: true,
       },
       timeScale: {
-        // leftOffset: 100000,
-        // rightOffset: 12,
-        fixLeftEdge:true,
-        fixRightEdge:true,
+        fixLeftEdge: true,
+        fixRightEdge: true,
         barSpacing: 3,
         autoScale: false,
         borderVisible: true,
         secondsVisible: true,
         visible: true,
         lockVisibleTimeRangeOnResize: true,
-        borderColor: "#EFF2F5",
         tickMarkFormatter: function (timestamp) {
           if (timeInterval === "1W") {
             return new Date(timestamp).getDate();
@@ -116,15 +99,10 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
           }
         },
         timeVisible: true,
-        // visibleRange: {
-        //   min,
-        // },
       },
       grid: {
         vertLines: {
           visible: false, // remove vertical lines
-          // color: "rgba(197, 203, 206, 0.176)",
-          // lineWidth: 0.1, // set thickness of horizontal lines
         },
         horzLines: {
           color: "rgba(197, 203, 206, 0.176)", // set color of horizontal lines
@@ -132,38 +110,21 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
           visible: true,
         },
       },
-
-      // barSpacing: 10,
     });
 
-// chart.timeScale().setVisibleLogicalRange({ from: 0.5, to: 8.5 });
+    chartRef.current.timeScale().fitContent();
 
-    chart.timeScale().fitContent();
-
-    const baselineSeries = chart.addBaselineSeries({
-      // baseValue: { type: "price", price: 26.38 },
+    const baselineSeries = chartRef.current.addBaselineSeries({
       scaleMargins: {
         top: 0.1, // highest point of the series will be 10% away from the top
         bottom: 0.2, // lowest point will be 40% away from the bottom
       },
-      baseValue: { type: "price", price: 26.84 },
+      baseValue: { type: "price", price: baseValue },
       topLineColor: "#16C784",
-      // topFillColor1: "#d9f6ebdd",
-      // topFillColor2: "#d9f6ebdd",
       bottomLineColor: "#EA3943",
-      // bottomFillColor1: "#FEFBFB",
-      // bottomFillColor2: "#FEFBFB",
     });
 
-    // baselineSeries.priceScale().applyOptions({
-    //   scaleMargins: {
-    //     top: 0.1, // highest point of the series will be 10% away from the top
-    //     bottom: 0.2, // lowest point will be 40% away from the bottom
-    //   },
-    // });
-    const volumeSeries = chart.addHistogramSeries({
-      color: "#CFD6E4",
-      // color: "#EFF2F5",
+    const volumeSeries = chartRef.current.addHistogramSeries({
       width: 700,
       height: 200,
       priceFormat: {
@@ -187,25 +148,57 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
     });
     baselineSeries.setData(data);
     volumeSeries.setData(data);
-    // chart.timeScale().setVisibleLogicalRange({ from: 0.3, to: 1});
-    // chart.timeScale().setVisibleRange({
-    //   from: 0.3,
-    //   to: 0.4,
-    // });
 
+    const ChartThemeChanger = () => {
+      if (theme === "Dark") {
+        chartRef.current.applyOptions({
+          leftPriceScale: {
+            visible: true,
+            lockVisibleTimeRangeOnResize: true,
+            borderColor: "#2C2E3D",
+          },
+          timeScale: {
+            borderColor: "#2C2E3D",
+          },
+        });
+        volumeSeries.applyOptions({
+          color: "#263052",
+        });
+      }
+      if (theme === "Light") {
+        chartRef.current.applyOptions({
+          leftPriceScale: {
+            visible: true,
+            lockVisibleTimeRangeOnResize: true,
+            borderColor: "#eff2f5",
+          },
+          timeScale: {
+            borderColor: "#eff2f5",
+          },
+        });
+        volumeSeries.applyOptions({
+          color: "#CFD6E4",
+        });
+      }
+    };
+
+    // Apply theme changes
+    ChartThemeChanger(theme);
+
+    // Tooltip
     const container = chartContainerRef.current;
 
-    const toolTipWidth = 270;
-    const toolTipHeight = 0;
+    const toolTipWidth = 250;
+    const toolTipHeight = 120;
     const toolTipMargin = 15;
 
     // Create and style the tooltip html element
     const toolTip = document.createElement("div");
-    toolTip.style = `width: 300px; height: 110px; position: absolute; display: none; padding: 8px; box-sizing: border-box;z-index: 1000; top: 0px; left: 12px; pointer-events: none;`;
+    toolTip.style = `width: 220px; height: 110px; position: absolute; display: none; padding: 8px; box-sizing: border-box;z-index: 1000; top: -100px; left: 12px; pointer-events: none;`;
     container.appendChild(toolTip);
 
     // update tooltip
-    chart.subscribeCrosshairMove((param) => {
+    chartRef.current.subscribeCrosshairMove((param) => {
       // console.log(param);
       if (
         param.point === undefined ||
@@ -219,8 +212,6 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
       } else {
         // time will be in the same format that we supplied to setData.
         // thus it will be YYYY-MM-DD
-        // const dateStr = param.time;
-
         const dateStr = formatDate(new Date(param.time));
 
         // get the date form param.time
@@ -238,27 +229,31 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
 
         toolTip.innerHTML = `<div
         style="
-          background-color: white;
-          width: 300px;
-          box-shadow: 0px 0px 10px #eeeeeed1;
+        background-color: ${theme === "Light" ? "white" : "#313445"};
+          box-shadow:${theme === "Light" ? "0px 0px 10px #eeeeeed1" : "unset"};
+          width: 250px;
+          height:80px;
           border-radius: 5px;
           padding: 10px 20px;
         "
       >
-      <div class="d-flex justify-content-between">
-      <div style="font-size: 14px; font-weight: 500">${formattedDate}</div>
+      <div style="display:flex;justify-content: space-between">
+      <div style="color:${
+        theme === "Dark" ? "white" : "black"
+      };font-size: 14px; font-weight: bold">${formattedDate}</div>
       <div style="color: #808A9D; font-size: 13px">${dateStr}</div>
       </div>
-      <div class="my-1">
-      <div class="d-flex align-items-center" style="margin:0px">   
+      <div style="margin-top:0.6rem">
+      <div style="margin:0px;display:flex;align-items:center">   
             <div class=${
-              price > 26.84 ? "circle2" : "circle"
+              price > baseValue ? "circle2" : "circle"
             } style="margin:0px"></div>
-            <div class="mx-2">
+            <div style="margin-left:0.6rem">
               <span style="color: #808A9D; font-size: 13px">Price:</span>
               <span
-                class="px-1"
-                style="font-size: 14px; font-weight: 500" 
+                style="font-size: 14px; font-weight: bold;padding-left:0.4rem;color:${
+                  theme === "Dark" ? "white" : "black"
+                }" 
               >
               $${Math.round(price * 1000000) / 1000}
               </span>      
@@ -266,15 +261,16 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
           </div>
         </div>
         <div>
-          <div class="d-flex align-items-center" style="margin: 0px">
-          <div class="align-self-start">
+          <div style="margin-top: 0.5rem;display:flex;align-items:center">
+          <div style="align-self:start">
               <i class="fa-solid fa-square-caret-down" style="color: #808A9D; font-size: 13px"></i>
           </div>
-          <div class="mx-2">
+          <div style="margin-left:0.6rem">
               <span style="color: #808A9D; font-size: 13px">Vol 24h:</span>
               <span
-                class="px-1"
-                style="font-size: 14px; font-weight: 500"
+                style="font-size: 14px; font-weight: bold;padding-left:0.4rem;color:${
+                  theme === "Dark" ? "white" : "black"
+                }"
               >
                 $17.49B
           </span>
@@ -285,7 +281,6 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
       </div>`;
 
         const coordinate = baselineSeries.priceToCoordinate(price);
-        // let shiftedCoordinate = param.point.x - 50;
         let shiftedCoordinate = param.point.x - 0;
         if (coordinate === null) {
           return;
@@ -309,33 +304,43 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
       }
     });
 
-    chart.timeScale().fitContent();
+    chartRef.current.timeScale().fitContent();
 
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
 
-      chart.remove();
+      chartRef.current.remove();
     };
   }, [
     data,
     colors.backgroundColor,
     backgroundColor,
     timeInterval,
-    // lineColor,
+    theme,
     colors.textColor,
-    // areaTopColor,
-    // areaBottomColor,
-    // prices
   ]);
 
   return (
     <>
-      <div className="chartComponent" style={{position:"relative"}}>
-        <div ref={chartContainerRef}></div>
-      </div>
-      {/* <div ref={chartContainerRef} id="container"/> */}
+      {theme === "Dark" ? (
+        <div
+          className="chartComponent__darkMode"
+          style={{ position: "relative" }}
+        >
+          <div ref={chartContainerRef}></div>
+        </div>
+      ) : (
+        <div
+          className="chartComponent__lightMode"
+          style={{ position: "relative" }}
+        >
+          <div ref={chartContainerRef}></div>
+        </div>
+      )}
+
+      {/* <div ref={chartContainerRef} id="container" /> */}
     </>
   );
 };

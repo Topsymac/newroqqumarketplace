@@ -5,7 +5,6 @@ import Text from "../../../atoms/text/Text";
 import AddIcon from "../../../Images/AddIcon.png";
 import { ThemeContext } from "../../../context/ThemeContext";
 
-
 const RecentlyAdded = () => {
   const [allToken, setAllToken] = useState([]);
   const [tokenPrice, setTokenPrice] = useState([]);
@@ -19,10 +18,10 @@ const RecentlyAdded = () => {
       .catch((err) => console.log(err));
   }, []);
 
-//   console.log(tokenPrice);
+  //   console.log(tokenPrice);
 
   const prices = tokenPrice.data;
-//   console.log(prices);
+  //   console.log(prices);
   // price = pricesResult[token.symbol].price
 
   //   console.log(tokenPrice.map(price=>price));
@@ -42,7 +41,7 @@ const RecentlyAdded = () => {
 
   const { theme } = useContext(ThemeContext);
 
-//   console.log(allToken);
+  //   console.log(allToken);
   return (
     <>
       <div>
@@ -59,12 +58,12 @@ const RecentlyAdded = () => {
                 : "",
           }}
         >
-          <div className="d-flex justify-content-between align-items-center mb-3">
-            <div className="d-flex align-items-baseline">
+          <div className="RecentlyAdded__card">
+            <div className="RecentlyAdded__header">
               <div>
                 <img src={AddIcon} alt="AddIcon" id="AddIcon" />
               </div>
-              <div className="mx-3">
+              <div className="RecentlyAdded__recently-text">
                 <b style={{ fontWeight: "bold", fontSize: "17px" }}>
                   <Text text="Recently Added" />
                 </b>
@@ -74,14 +73,14 @@ const RecentlyAdded = () => {
             <div>
               <div style={{ fontWeight: "bold", fontSize: "12px" }}>
                 <Link
-                  className="d-flex align-items-center"
+                  className="RecentlyAdded__link"
                   to="recently-added-coin"
                   style={{ textDecoration: "none" }}
                   state={{ id: "5" }}
                 >
                   <Text text="More" />
                   <i
-                    className="fa fa-angle-right mx-2"
+                    className="fa fa-angle-right RecentlyAdded__fa-angle-right"
                     aria-hidden="true"
                     style={{ fontWeight: "bold", fontSize: "12px" }}
                   ></i>
@@ -90,16 +89,12 @@ const RecentlyAdded = () => {
             </div>
           </div>
           <div>
-            {allToken.splice(3, 3).map((token, index) => (
-              <div
-                key={token.id}
-                className="d-flex justify-content-between mx-2"
-                style={{ fontSize: "14px" }}
-              >
+            {allToken.slice(3, 6).map((token, index) => (
+              <div key={token.id} className="RecentlyAdded__token">
                 <div>
-                  <ul className="list-unstyled d-flex">
+                  <ul className="RecentlyAdded__list-div">
                     <li>
-                      <span className="text-secondary">{index + 1}</span>
+                      <span className="RecentlyAdded__index">{index + 1}</span>
                     </li>
                     <li style={{ marginLeft: "22px" }}>
                       <img
@@ -107,15 +102,19 @@ const RecentlyAdded = () => {
                         alt=""
                         height="15"
                         width="15"
-                        style={{ verticalAlign: "top !important" }}
+                        className="RecentlyAdded__img"
                       />
                     </li>
-                    <li className="mx-2">
+                    <li className="RecentlyAdded__token-name">
                       <b>{token.name}</b>
                     </li>
                     <li
-                      className="mx-2 text-secondary"
-                      style={{ textTransform: "uppercase" }}
+                      className="text-secondary"
+                      style={{
+                        textTransform: "uppercase",
+                        marginLeft: "10px",
+                        color: "#A6B0C3",
+                      }}
                     >
                       {token.symbol}
                     </li>

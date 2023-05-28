@@ -30,7 +30,7 @@
   .RecentlyAdded {
     /* width: 33%; */
     /* width: 448px; */
-    width: 400px;
+    width: 370px;
     height: 200px;
     padding: 16px;
     box-shadow: rgba(88, 102, 126, 0.08) 0px 4px 24px,
@@ -41,5 +41,55 @@
   #AddIcon{
     width: 20px;
     height: 20px;
+  }
+  .RecentlyAdded__card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .RecentlyAdded__header{
+    display: flex;
+    align-items: center;
+  }
+  .RecentlyAdded__link{
+    display: flex;
+    align-items: center;
+    color: #3861fb !important;
+  }
+  .RecentlyAdded__fa-angle-right{
+    margin-left: 5px;
+    font-weight: bold !important;
+    font-size: 12px;
+  }
+  .RecentlyAdded__token{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 14px;
+  }
+  .RecentlyAdded__list-div{
+    display: flex;
+    list-style:none;
+    align-items: start;
+    padding-left: 5px;
+  }
+  .RecentlyAdded__index{
+    color: #A6B0C3;
+  }
+  .RecentlyAdded__img{
+    position: relative;
+    top: 2px;
+    vertical-align: top !important;
+  }
+  .RecentlyAdded__token-name{
+    margin-left: 7px;
+  }
+  .RecentlyAdded__recently-text{
+    margin-left: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    position: relative;
+    top: -2px;
   }
 }

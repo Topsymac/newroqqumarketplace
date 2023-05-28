@@ -8,7 +8,7 @@ import { ThemeContext } from "../../../context/ThemeContext";
 
 const TrendingToken = () => {
   const [trendingAllToken, setTrendingAllToken] = useState([]);
-  // const [change, setChange] = useState(0);
+  const [change, setChange] = useState(0);
 
   // useEffect(() => {
   //   fetch("https://staging.roqqu.com/v2/all-tokens")
@@ -115,28 +115,27 @@ const TrendingToken = () => {
               : "",
         }}
       >
-        <div className="d-flex justify-content-between align-items-center mb-3 trendingCard">
-          <div className="d-flex align-items-baseline trendinggIcon">
+        <div className="trendingToken__card">
+          <div className="trendingToken__header">
             <div id="trendingIcon">
               <img src={TrendingIcon} alt="TrendingIcon" id="trendingIcon" />
             </div>
-            <div className="mx-3">
-              <b style={{ fontWeight: "bold", fontSize: "17px" }}>
+            <div className="trendingToken__trending-text">
+              <b>
                 <Text text="Trending" />
               </b>
               {/* <p>Trending</p> */}
             </div>
           </div>
-          <div style={{ fontWeight: "bold", fontSize: "12px" }}>
+          <div>
             <Link
-              className="d-flex align-items-center "
+              className="trendingToken__link"
               to="trending-cryptocurrency"
-              style={{ textDecoration: "none" }}
               state={{ id: "3" }}
             >
               <Text text="More" />
               <i
-                className="fa fa-angle-right mx-2"
+                className="fa fa-angle-right trendingToken__fa-angle-right"
                 aria-hidden="true"
                 style={{ fontWeight: "bold", fontSize: "12px" }}
               ></i>
@@ -144,45 +143,32 @@ const TrendingToken = () => {
           </div>
         </div>
         <div>
-          {trendingAllToken.splice(1, 3).map((trendingToken, index) => (
-            <div
-              key={trendingToken.id}
-              className="d-flex justify-content-between align-items-center mx-2"
-              style={{
-                fontSize: "14px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                paddingTop: "5px",
-              }}
-            >
-              <div
-                style={{
-                  paddingLeft: "-35px",
-                  marginLeft: "-35px",
-                }}
-              >
-                <ul
-                  className="list-unstyled d-flex"
-                  style={{ listStyle: "none", display: "flex", gap: "15px" }}
-                >
+          {trendingAllToken.slice(4, 7).map((trendingToken, index) => (
+            <div key={trendingToken.id} className="trendingToken__token">
+              <div>
+                <ul className="trendingToken__list-div">
                   <li>
-                    <span className="text-secondary">{index + 1}</span>
+                    <span className=" trendingToken__index">{index + 1}</span>
                   </li>
-                  <li>
+                  <li style={{ marginLeft: "22px" }}>
                     <img
                       src={`https://roqqu.com/static/media/tokens/${trendingToken.symbol}.png`}
                       alt=""
                       height="15"
                       width="15"
+                      className="trendingToken__img"
                     />
                   </li>
-                  <li className="mx-2">
+                  <li className="trendingToken__token-name">
                     <b>{trendingToken.name}</b>
                   </li>
                   <li
-                    className="mx-2 text-secondary"
-                    style={{ textTransform: "uppercase", color: "grey" }}
+                    className=""
+                    style={{
+                      textTransform: "uppercase",
+                      marginLeft: "10px",
+                      color: "#A6B0C3",
+                    }}
                   >
                     {trendingToken.symbol}
                   </li>
@@ -195,17 +181,21 @@ const TrendingToken = () => {
                     return (
                       <>
                         {change < 0 ? (
-                          <div className="text-danger">
-                            <IoMdArrowDropdown color="red" fontSize="20px" />
+                          <div style={{ color: "red" }}>
+                            <IoMdArrowDropdown
+                              color="red"
+                              fontSize="20px"
+                              className="trendingToken__tokenCaret"
+                            />
                             {`${change}%`}
                           </div>
                         ) : (
-                          <div
-                            style={{
-                              color: "#16c784",
-                            }}
-                          >
-                            <IoMdArrowDropup color="#16c784" fontSize="20px" />
+                          <div style={{ color: "#16c784" }}>
+                            <IoMdArrowDropup
+                              color="#16c784"
+                              fontSize="20px"
+                              className="trendingToken__tokenCaret"
+                            />
                             {`${change}%`}
                           </div>
                         )}

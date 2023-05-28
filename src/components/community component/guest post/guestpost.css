@@ -1,8 +1,23 @@
 .guestPost__logoText{
     font-size: 12px;
     font-weight: bold;
+    text-align: end;
+    margin-left: 0.5rem;
 }
 
 .guestPost__overlay{
-    margin-top: 140px;
+    position: relative;
+    top: -95px;
+    z-index: 10;
+    /* margin-top: 140px; */
+}
+
+.guestPost__div{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.guestPost{
+    height: 260px;
 }
