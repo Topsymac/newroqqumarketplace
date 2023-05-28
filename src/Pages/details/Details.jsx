@@ -38,7 +38,7 @@ const Details = () => {
           ></div>
         </div>
         <Converter />
-        {/* <Card /> */}
+        <Card />
       </div>
       <Footer />
     </div>
