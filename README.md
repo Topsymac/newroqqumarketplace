@@ -23,24 +23,24 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 **Each section of this project was split into 3 paths**
 
-## Trending and recently added coin * Cryptocurrency to USD chart - was built by Chukwudi
-## All cryptocurrency assets and Roqqu Navbar and bottom Navbar - was built by Temi.
-## Cryptocurrency to USD converter and Coin page - was built by Omi
+**Trending and recently added coin * Cryptocurrency to USD chart - was built by Chukwudi
+**All cryptocurrency assets and Roqqu Navbar and bottom Navbar - was built by Temi.
+**Cryptocurrency to USD converter and Coin page - was built by Omi
 
 
 ### Details of the project
 
 **Homepage contains
-Navbar
-Trending coin card, Recently added coin card, Community card
-Bottom Navbar
+*Navbar
+*Trending coin card, Recently added coin card, Community card
+*Bottom Navbar
 
 **Each coin/cryptocurrency details contains
-Navbar
-Coin Page
-Cryptocurrency to USD chart
-Crytocurrency to USD converter
-Bottom Navbar
+*Navbar
+*Coin Page
+*Cryptocurrency to USD chart
+*Crytocurrency to USD converter
+*Bottom Navbar
 
 this is the link to the project https://roqqu-market-place.netlify.app/
 # newroqqumarketplace
