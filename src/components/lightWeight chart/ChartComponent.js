@@ -1,18 +1,23 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { formatDate } from "../../utilis/FormatDate";
 // import { ChartThemeChanger } from "./chart theme changer/ChartThemeChanger";
-
 import { createChart, ColorType } from "lightweight-charts";
 import { ThemeContext } from "../../context/ThemeContext";
+
+// Import the watermark image
+import watermarkImageDark from "../../Images/Logo-White.png";
+import watermarkImageLight from "../../Images/roqqu-color.svg";
 
 import "./chartcomponent.css";
 
 export const ChartComponent = ({ data, colors, timeInterval }) => {
   const { theme } = useContext(ThemeContext);
 
+  // console.log(data.value)
   // const openPrice = data && data[0] > 0 && data[0].value;
   const openPrice = data && data[0] && data[0].value;
   const baseValue = parseInt(openPrice);
+  // console.log(baseValue)
 
   const { backgroundColor } = colors;
 
@@ -34,6 +39,11 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
 
   useEffect(() => {
     chartRef.current = createChart(chartContainerRef.current, {
+      seriesOptions: {
+        baselineSeries: {
+          seriesMarkerShape: "circle", // Add this line
+        },
+      },
       layout: {
         background: { type: ColorType.Solid, color: backgroundColor },
         textColor: "#808A9D",
@@ -50,10 +60,25 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
         minBarSpacing: 2,
         lockVisibleTimeRangeOnResize: true,
       },
+      // leftPriceScale: {
+      //   drawTicks: true,
+      //   borderVisible: true,
+      //   borderColor: "#A7B1BC50",
+      // },
       localization: {
         priceFormatter: (data) =>
-          data > 1 ? data.toFixed(2) + "k" : data.toFixed(2) + "$",
+          data > 10000
+            ? (data / 1000).toFixed(2) + "K"
+            : data > 1000
+            ? data.toFixed() + "k"
+            : data > 1
+            ? "$" + data.toFixed(2)
+            : data < 1
+            ? data.toFixed(4) + "$"
+            : data.toFixed(2) + "$",
+        // data > 1 ? data.toFixed(2) + "k" : data.toFixed(2) + "$",
       },
+      // minMove:0.0000001
     });
     // Set the price scale to the left-hand side
     chartRef.current.applyOptions({
@@ -122,6 +147,13 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
       baseValue: { type: "price", price: baseValue },
       topLineColor: "#16C784",
       bottomLineColor: "#EA3943",
+      lastValueVisible: false,
+      priceLineVisible: false,
+    });
+
+    // when i did this i was able to see the prices on the price scale below 0.001
+    baselineSeries.applyOptions({
+      priceFormat: { type: "price", precision: 5, minMove: 0.000000001 },
     });
 
     const volumeSeries = chartRef.current.addHistogramSeries({
@@ -255,7 +287,7 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
                   theme === "Dark" ? "white" : "black"
                 }" 
               >
-              $${Math.round(price * 1000000) / 1000}
+              $${price > 1000 ? Math.round(price).toFixed(2) : price}
               </span>      
             </div>
           </div>
@@ -304,6 +336,29 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
       }
     });
 
+    // this show the line dividing the loss and profit color
+    const avgPriceLine = {
+      price: baseValue,
+      color: theme === "Dark" ? "white" : "black",
+      // lineWidth: lineWidth,
+      lineStyle: 1, // LineStyle.Dotted
+      axisLabelVisible: true,
+      // title: "ave price",
+    };
+    baselineSeries.createPriceLine(avgPriceLine);
+
+    // Add watermark image based on theme
+    const watermarkImage = document.createElement("img");
+    watermarkImage.style.width = "80px";
+    watermarkImage.style.height = "20px";
+    watermarkImage.className = "watermark";
+    if (theme === "Dark") {
+      watermarkImage.src = watermarkImageDark;
+    } else {
+      watermarkImage.src = watermarkImageLight;
+    }
+    chartContainerRef.current.appendChild(watermarkImage);
+
     chartRef.current.timeScale().fitContent();
 
     window.addEventListener("resize", handleResize);
@@ -340,6 +395,7 @@ export const ChartComponent = ({ data, colors, timeInterval }) => {
         </div>
       )}
 
+      {/* <img class="watermark" src="../../Images/Logo-White.png"></img> */}
       {/* <div ref={chartContainerRef} id="container" /> */}
     </>
   );

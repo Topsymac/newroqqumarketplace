@@ -68,4 +68,11 @@
   border: 1px solid #2C2E3D !important
 }
 
-
+.watermark {
+  position: absolute;
+  top: 88.5%;
+  left: 120px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10; /* Ensure the watermark is displayed on top of the chart */
+}

@@ -12,7 +12,7 @@ import "./chartapicomponent.css";
 
 const ChartApiComponent = (props) => {
   const location = useLocation();
-    const coinDataSymbol = location.state.coinData.symbol;
+  const coinDataSymbol = location.state.coinData.symbol;
 
   const [prices, setPrices] = useState([]);
   const [timeInterval, setTimeInterval] = useState("1H");
@@ -31,7 +31,13 @@ const ChartApiComponent = (props) => {
           // console.log({ dateTime: date.getTime() });
           // const timestamp =
           //   timeInterval === "1H" ? date.getTime() / 1000 : date.getTime();
-          const value = parseFloat(singlePrice.price) / 1000;
+          // const
+          // const value =
+          //   singlePrice.price > 1000
+          //     ? parseFloat(singlePrice.price) / 1000
+          //     : parseFloat(singlePrice.price);
+          const value = parseFloat(singlePrice.price);
+
           // console.log(value)
           // const timestamp =
           //   timeInterval === "1H" && timeInterval === "1D"
@@ -97,7 +103,7 @@ const ChartApiComponent = (props) => {
       <div
         className="chartApiComponent"
         id="chartApiComponent"
-        style={{ backgroundColor: theme === "Dark" ? "#161722" : "white"}}
+        style={{ backgroundColor: theme === "Dark" ? "#161722" : "white" }}
       >
         <div className="chartApiComponent__chart">
           <div>
@@ -108,7 +114,12 @@ const ChartApiComponent = (props) => {
                 fontSize: "20px",
               }}
             >
-              {`${location.state.coinData? location.state.coinData.name : 'bitcoin'}`} to USD Chart
+              {`${
+                location.state.coinData
+                  ? location.state.coinData.name
+                  : "bitcoin"
+              }`}{" "}
+              to USD Chart
             </p>
             {/* <Text text="Bitcoin to USD Chart"/> */}
             <div>
@@ -140,8 +151,7 @@ const ChartApiComponent = (props) => {
             </div>
           </div>
         </div>
-        <div
-          className="chartApiComponent__communityComponent">
+        <div className="chartApiComponent__communityComponent">
           <CommunityComponent />
         </div>
       </div>
