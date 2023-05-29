@@ -20,6 +20,7 @@
     .chartApiComponent__chart{
         width: 66%;
         margin: 5px;
+        padding-left: 15px;
     }
     .chartApiComponent__communityComponent{
         margin-top: 0px;
