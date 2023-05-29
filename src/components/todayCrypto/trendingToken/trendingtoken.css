@@ -1,6 +1,6 @@
 @media screen and (min-width: 100px) {
   .trendingToken {
-    width: 100%;
+    /* width: 665px; */
     /* width: 33%; */
     max-width: 448px;
     height: 200px;
@@ -32,7 +32,7 @@
   .trendingToken {
     /* width: 33%; */
     /* width: 448px; */
-    width: 370px;
+    width: 420px;
     height: 200px;
     padding: 16px 20px;
     box-shadow: rgba(88, 102, 126, 0.08) 0px 4px 24px,

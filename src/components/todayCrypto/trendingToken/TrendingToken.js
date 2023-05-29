@@ -8,7 +8,7 @@ import { ThemeContext } from "../../../context/ThemeContext";
 
 const TrendingToken = () => {
   const [trendingAllToken, setTrendingAllToken] = useState([]);
-  const [change, setChange] = useState(0);
+  // const [change, setChange] = useState(0);
 
   // useEffect(() => {
   //   fetch("https://staging.roqqu.com/v2/all-tokens")
