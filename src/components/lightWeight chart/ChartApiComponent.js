@@ -12,7 +12,7 @@ import "./chartapicomponent.css";
 
 const ChartApiComponent = (props) => {
   const location = useLocation();
-  const [coinDataSymbol,setCoinData] =  'btc';
+    const coinDataSymbol = location.state.coinData.symbol;
 
   const [prices, setPrices] = useState([]);
   const [timeInterval, setTimeInterval] = useState("1H");

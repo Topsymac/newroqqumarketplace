@@ -25,7 +25,7 @@ const CommunityBtn = ({
 }) => {
   return (
     <>
-      <px
+      <div
         className="communityBtn btn"
         style={{
           width: `${width}px`,
@@ -65,7 +65,7 @@ const CommunityBtn = ({
         >
           <Text text={text} />
         </div>
-      </px>
+      </div>
     </>
   );
 };
