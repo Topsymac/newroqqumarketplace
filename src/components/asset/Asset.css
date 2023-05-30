@@ -393,6 +393,9 @@ td a {
     background: red;
     padding: 5px;
   } */
+  .pagination{
+    margin-bottom: -5px;
+  }
   .pagination li {
     padding: 7px;
   }
