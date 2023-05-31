@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./community.css";
 import { ThemeContext } from "../../../context/ThemeContext";
 import Logo from "../../../Images/roqqu-color.svg";
-import Logowhite from "../../../Images/Logo-White.png";
+// import Logowhite from "../../../Images/Logo-White.png";
 import communityArticleImg from "../../../Images/article communtity.png";
 import HelloArticleImg from "../../../Images/62739f727d1c136ae384201f.png";
 import communityAccount1 from "../../../Images/8277c31cdcc64aca8e5b002a710f06b0.png";
@@ -232,6 +232,7 @@ const Community = () => {
                     <div style={{ display: "flex", marginTop: "15px" }}>
                       <div>
                         <img
+                        alt="**"
                           src={communityArticleImg}
                           style={{
                             width: "100px",
@@ -425,11 +426,13 @@ const Community = () => {
                       <div className="community__community-account-div">
                         <div>
                           <img
+                          alt="**"
                             src={communityAccount1}
                             style={{
                               width: "25px",
                               height: "25px",
                               borderRadius: "10px",
+                              
                             }}
                           />
                         </div>
@@ -502,6 +505,7 @@ const Community = () => {
                       >
                         <div>
                           <img
+                          alt="**"
                             src={communityAccount2}
                             style={{
                               width: "25px",
@@ -569,6 +573,7 @@ const Community = () => {
                         <div style={{ display: "flex" }}>
                           <div>
                             <img
+                            alt="**"
                               src={communityAccount3}
                               style={{
                                 width: "25px",

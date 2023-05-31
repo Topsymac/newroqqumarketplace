@@ -20,19 +20,31 @@
 }
 @media screen and (min-width: 992px) {
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .todayCrypto {
     padding: 20px;
+    padding-left: 28px;
+    padding-top: 35px;
     background-color: #fafbfe;
     /* width: 100vw; */
   }
   .todayCrypto__header {
     font-weight: bold;
-    font-size: 25px;
+    font-size: 24px;
+    color:#222531
   }
   .todayCrypto__paragraph{
     font-size: 15px;
   }
+  .todayCrypto__trendingToken{
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; */
+    display: none;
+  }
+}
+@media screen and (min-width:1410px) {
   .todayCrypto__trendingToken{
     display: flex;
     flex-wrap: wrap;
@@ -40,3 +52,13 @@
     align-items: center;
   }
 }
+
+.todayCrypto__read-more{
+  color: #808a9d;
+  font-size: 15px;
+}
+.todayCrypto__paragraph{
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom:25px !important;
+  }

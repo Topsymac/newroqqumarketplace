@@ -16,7 +16,10 @@ const TodayCrypto = () => {
       <div
         className="todayCrypto"
         style={{
-          backgroundColor: theme === "Light" ? "#FFF" : "#21232E",
+          backgroundColor:
+            theme === "Light"
+              ? "linear-gradient(rgb(248, 250, 253) 0%, rgba(248, 250, 253, 0) 413px)"
+              : "#21232E",
           color: theme === "Light" ? "black" : "white",
         }}
       >
@@ -26,7 +29,7 @@ const TodayCrypto = () => {
         {/* <div>
             <Text text="The global crypto market cap is $1.21T, a 0.24% decrease over the last day.Read More"></Text>
         </div> */}
-        <div className="mt-1">
+        <div className="">
           <p
             className="todayCrypto__paragraph"
             style={{
@@ -49,7 +52,7 @@ const TodayCrypto = () => {
               </span>
             </span>
             decrease over the last day.{" "}
-            <a href="#" className="text-secondary" style={{ fontSize: "16px" }}>
+            <a href="\" className="todayCrypto__read-more">
               Read More
             </a>
           </p>
