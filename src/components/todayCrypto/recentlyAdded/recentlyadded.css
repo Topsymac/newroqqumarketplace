@@ -1,23 +1,7 @@
-@media screen and (min-width: 100px) {
-  .RecentlyAdded {
-    /* width: 33%; */
-    width: 448px;
-    height: 200px;
-    padding: 16px;
-    box-shadow: rgba(88, 102, 126, 0.08) 0px 4px 24px,
-      rgba(88, 102, 126, 0.12) 0px 1px 2px;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-}
-@media screen and (min-width: 576px) {
-}
-@media screen and (min-width: 768px) {
-}
 @media screen and (min-width: 992px) {
   .RecentlyAdded {
     /* width: 33%; */
-    width: 448px;
+    /* width: 448px; */
     height: 200px;
     padding: 16px;
     box-shadow: rgba(88, 102, 126, 0.08) 0px 4px 24px,
@@ -28,11 +12,11 @@
 }
 @media screen and (min-width: 1200px) {
   .RecentlyAdded {
-    /* width: 33%; */
+    width: 100%;
     /* width: 448px; */
-    width: 420px;
+    /* width: 420px; */
     height: 170px;
-    padding: 16px;
+    padding: 15px;
     box-shadow: rgba(88, 102, 126, 0.08) 0px 4px 24px,
       rgba(88, 102, 126, 0.12) 0px 1px 2px;
     border-radius: 8px;
@@ -73,6 +57,9 @@
     list-style:none;
     align-items: start;
     padding-left: 5px;
+    margin: 0px;
+    margin-top: 8px;
+    margin-bottom: 15px;
   }
   .RecentlyAdded__index{
     color: #A6B0C3;
@@ -83,13 +70,17 @@
     vertical-align: top !important;
   }
   .RecentlyAdded__token-name{
+    font-size: 12px;
     margin-left: 7px;
   }
   .RecentlyAdded__recently-text{
     margin-left: 10px;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     position: relative;
     top: -2px;
+  }
+  .RecentlyAdded__pricesToken{
+    font-size: 12px;
   }
 }

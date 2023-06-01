@@ -26,8 +26,8 @@ const Community = () => {
     slidesToScroll: 1,
     autoplaySpeed: 2000,
     arrows: false,
-    autoplay: true,
   };
+  // autoplay: true,
 
   return (
     <>
@@ -82,7 +82,7 @@ const Community = () => {
                               alignItems: "center",
                               textDecoration: "none",
                               color: "#3861FB",
-                              fontWeight: "500",
+                              fontWeight: "bold",
                             }}
                           >
                             <Text text="More" />
@@ -125,7 +125,7 @@ const Community = () => {
                         style={{
                           marginTop: "5px",
                           marginLeft: "25px",
-                          fontSize: "16px",
+                          fontSize: "14px",
                         }}
                       >
                         Nigerian crypto exchange Roqqu receives European virtual
@@ -212,7 +212,7 @@ const Community = () => {
                               alignItems: "center",
                               textDecoration: "none",
                               color: "#3861FB",
-                              fontWeight: "500",
+                              fontWeight: "bold",
                             }}
                           >
                             <Text text="More" />
@@ -232,7 +232,7 @@ const Community = () => {
                     <div style={{ display: "flex", marginTop: "15px" }}>
                       <div>
                         <img
-                        alt="**"
+                          alt="**"
                           src={communityArticleImg}
                           style={{
                             width: "100px",
@@ -271,7 +271,7 @@ const Community = () => {
                           </div>
                           <p
                             style={{
-                              fontSize: "15px",
+                              fontSize: "12px",
                               marginBottom: "0px",
                               marginTop: "10px",
                               marginLeft: "15px",
@@ -405,7 +405,7 @@ const Community = () => {
                               alignItems: "center",
                               textDecoration: "none",
                               color: "#3861FB",
-                              fontWeight: "500",
+                              fontWeight: "bold",
                             }}
                           >
                             <Text text="More" />
@@ -426,13 +426,12 @@ const Community = () => {
                       <div className="community__community-account-div">
                         <div>
                           <img
-                          alt="**"
+                            alt="**"
                             src={communityAccount1}
                             style={{
                               width: "25px",
                               height: "25px",
                               borderRadius: "10px",
-                              
                             }}
                           />
                         </div>
@@ -505,7 +504,7 @@ const Community = () => {
                       >
                         <div>
                           <img
-                          alt="**"
+                            alt="**"
                             src={communityAccount2}
                             style={{
                               width: "25px",
@@ -570,10 +569,10 @@ const Community = () => {
                       }}
                     >
                       <div>
-                        <div style={{ display: "flex" }}>
+                        <div style={{ display: "flex",alignItems:"center" }}>
                           <div>
                             <img
-                            alt="**"
+                              alt="**"
                               src={communityAccount3}
                               style={{
                                 width: "25px",

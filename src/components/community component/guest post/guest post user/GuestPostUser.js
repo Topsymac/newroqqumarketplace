@@ -10,7 +10,7 @@ import certifiedIcon from "../../../../Images/certified.svg";
 // import { IoChartboxEllipses } from "react-icons";
 
 const GuestPostUser = ({
-  id = "",
+  // id = "",
   userTag = "",
   nameText = "",
   dateText = "",
@@ -29,7 +29,7 @@ const GuestPostUser = ({
   const { theme } = useContext(ThemeContext);
   return (
     <>
-      <div className="GuestPostUser" id={id} onClick={handleClick}>
+      <div className="GuestPostUser"  onClick={handleClick}>
         <div>
           <div>
             {/* <img style={{ height: "40px" }}
@@ -98,7 +98,7 @@ const GuestPostUser = ({
               style={{
                 color: theme === "Light" ? "black" : "white",
                 fontSize: "16px",
-                width: "300px !important",
+                width: "310px !important",
               }}
             >
               <GuestPostParagraph text={paragraphtext} readAll="Read all" />
