@@ -154,8 +154,8 @@ const TrendingToken = () => {
                     <img
                       src={`https://roqqu.com/static/media/tokens/${trendingToken.symbol}.png`}
                       alt=""
-                      height="15"
-                      width="15"
+                      height="16"
+                      width="16"
                       className="trendingToken__img"
                     />
                   </li>
@@ -168,6 +168,7 @@ const TrendingToken = () => {
                       textTransform: "uppercase",
                       marginLeft: "10px",
                       color: "#A6B0C3",
+                      fontSize:"12px"
                     }}
                   >
                     {trendingToken.symbol}
@@ -181,7 +182,7 @@ const TrendingToken = () => {
                     return (
                       <>
                         {change < 0 ? (
-                          <div style={{ color: "red" }}>
+                          <div style={{ color: "red",fontSize:"12px" }}>
                             <IoMdArrowDropdown
                               color="red"
                               fontSize="20px"
@@ -190,7 +191,7 @@ const TrendingToken = () => {
                             {`${change}%`}
                           </div>
                         ) : (
-                          <div style={{ color: "#16c784" }}>
+                          <div style={{ color: "#16c784",fontSize:"12px" }}>
                             <IoMdArrowDropup
                               color="#16c784"
                               fontSize="20px"

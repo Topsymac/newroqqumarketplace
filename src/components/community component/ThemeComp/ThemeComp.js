@@ -84,7 +84,7 @@ const ThemeComp = ({ firstText, secondText }) => {
         <div>
           <Link to="/">
             <i
-              className="fa-solid fa-recycle mx-1"
+              className="fa-solid fa-recycle"
               style={{ fontSize: "12px", paddingTop: "5px" }}
             ></i>{" "}
             Refresh

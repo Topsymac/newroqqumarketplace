@@ -16,16 +16,18 @@ const GuestPostPage = ({ blogData }) => {
               userTag,
               paragraphtext,
             }) => (
-              <GuestPostUser
-                key={id}
-                id={id}
-                img={img}
-                nameText={blogUser}
-                fontAwesome={certified}
-                dateText={dateText}
-                userTag={userTag}
-                paragraphtext={paragraphtext}
-              />
+              <div key={id}>
+                <GuestPostUser
+                 
+                  id={id}
+                  img={img}
+                  nameText={blogUser}
+                  fontAwesome={certified}
+                  dateText={dateText}
+                  userTag={userTag}
+                  paragraphtext={paragraphtext}
+                />
+              </div>
             )
           )}
         </div>

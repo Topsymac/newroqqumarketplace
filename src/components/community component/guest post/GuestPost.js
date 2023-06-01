@@ -72,18 +72,18 @@ const GuestPost = () => {
         <div className="card-img-overlay guestPost__overlay">
           <CommunityBtn
             text="Sign up to discuss"
-            padding="10"
-            paddingLeft="40"
-            paddingBottom="12"
+            // padding="10"
+            paddingLeft="30"
+            paddingBottom="13"
             // paddingRight="30"
-            borderRadius="5"
-            width="170"
+            borderRadius="8"
+            width="155"
             margin="auto"
             //   color="#3861FB"
             BGcolor="#3861FB"
             textColor="white"
             textFontWeight="bold"
-            textFontsize="15"
+            textFontsize="14"
           />
         </div>
 
