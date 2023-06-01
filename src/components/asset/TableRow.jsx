@@ -205,7 +205,7 @@ const TableRow = ({ name, symbol, price, data }) => {
           navigate("/details", { state: { coinData: data, price: price } });
         }}
       >
-        $208,648,137,656 <span>70,345 BTC</span>
+        $208,648,137,656<span style={{textAlign: "end", marginRight: "5px"}}>70,345 BTC</span>
       </td>
       <td className="chart">19,352,668 BTC</td>
       <td

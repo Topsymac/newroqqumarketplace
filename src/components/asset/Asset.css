@@ -18,12 +18,12 @@
 .leftAssNav {
   display: flex;
   gap: 1rem;
-  padding-right: 15px;
-  border-right: 2px solid grey;
+  /* padding-right: 15px; */
+  /* border-right: 2px solid grey; */
 }
 .middleAssNav {
   display: flex;
-  gap: 1.8rem;
+  gap: 1.7rem;
   color: rgb(88, 102, 126);
 }
 .rightAssNav {
@@ -37,6 +37,11 @@
   gap: 3px;
   padding: 0px;
 }
+/* .activeMainNav{
+  background-color: rgb(186, 216, 226);
+  color: blue;
+  
+} */
 
 .leftbtn {
   background-color: rgb(239, 242, 245);
@@ -152,6 +157,7 @@ td a {
   justify-content: center;
   align-items: center;
   padding: 15px;
+  font-weight: bold;
 }
 .pagination li {
   list-style: none;
@@ -159,7 +165,7 @@ td a {
   cursor: pointer;
 }
 .pagination li:hover {
-  background-color: rgb(229, 229, 242);
+  background-color: #cfd6e4;
   border-radius: 10px;
 }
 
