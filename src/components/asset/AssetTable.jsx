@@ -173,8 +173,8 @@ const AssetTable = () => {
       </div>
       <div>
         <ReactPaginate
-          previousLabel={"Previous"}
-          nextLabel={"Next"}
+          previousLabel={"<"}
+          nextLabel={">"}
           breakLabel={"..."}
           pageCount={assets.length / POST_PER_PAGE}
           marginPagesDisplayed={1}

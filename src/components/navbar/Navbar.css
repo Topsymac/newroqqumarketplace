@@ -7,10 +7,11 @@
 }
 .left-Topnav span {
   color: blue;
+  padding-right: 5px;
 }
 .right-Topnav {
   display: flex;
-  gap: 1rem;
+  gap: 0.7rem;
 }
 .toLeftNav {
   display: flex;
@@ -18,8 +19,34 @@
   align-items: center;
   gap: 1rem;
   font-weight: bold;
-  border-right: 2px solid grey;
-  padding: 0px 30px;
+  /* border-right: 2px solid rgb(218, 217, 217); */
+  /* padding: 0px 30px; */
+}
+.toLeftNavIcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.TopNavBorderRight{
+  border-right: 1px solid #eff2f5;
+  margin: 9px 0px;
+}
+.SignUpBtn{
+  padding: 0px 12px;
+  border-radius: 10px;
+  border: 1px;
+  background: blue;
+  color: #fff;
+}
+.LogInBtn{
+  padding: 0px 12px ;
+  border-radius: 10px;
+  border: 1px;
+  color: blue;
+  background: #fff;
+  border: 1px solid blue;
+ 
 }
 .navbartoo {
   display: none;

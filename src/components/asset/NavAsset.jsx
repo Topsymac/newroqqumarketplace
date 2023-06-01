@@ -43,9 +43,9 @@ const NavAsset = () => {
             <Portfolio />
           </div>
         </div>
-
+        <div className="TopNavBorderRight"></div>
         <div className="middleAssNav">
-          <p>Cryptocurrencies</p>
+          <p >Cryptocurrencies</p>
 
           <p>Categories</p>
 
