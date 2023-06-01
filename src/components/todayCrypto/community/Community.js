@@ -26,8 +26,8 @@ const Community = () => {
     slidesToScroll: 1,
     autoplaySpeed: 2000,
     arrows: false,
+    autoplay: true,
   };
-  // autoplay: true,
 
   return (
     <>
