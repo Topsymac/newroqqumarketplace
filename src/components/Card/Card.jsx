@@ -67,6 +67,7 @@ const Card = () => {
 
   return (
     <div
+      
       className="card-container"
       style={{
         backgroundColor: theme === "Light" ? "#FFF" : "hsl(235, 21%, 11%)",
@@ -74,7 +75,7 @@ const Card = () => {
       }}
     >
       <div>
-        <h2>People Also Watch</h2>
+          <h2 className="sticky-text">People Also Watch</h2>
         <div className="sub-card-container">
           {symbols.map((item, index) => {
             return (
@@ -100,7 +101,7 @@ const Card = () => {
                           item.change > 0 ? "green" : "red"
                         } card-percentages `}
                       >
-                        <span> 
+                        <span>
                           {item.change > 0 ? (
                             <MdArrowDropUp className="chevron-up" />
                           ) : (

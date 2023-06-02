@@ -14,7 +14,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { GiNotebook } from "react-icons/gi";
 import { MdArrowDropDown } from "react-icons/md";
 import { BsInfoCircle } from "react-icons/bs";
-import { IoMdArrowDropup } from "react-icons/io";
+import { IoMdArrowDropup, } from "react-icons/io";
 // import { MdOutlineArrowRight } from "react-icons/md";
 import { BsCodeSlash } from "react-icons/bs";
 import { useLocation } from "react-router-dom";
@@ -24,6 +24,8 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 import { BsPlus } from "react-icons/bs";
 import { BsChevronRight } from "react-icons/bs";
 import { BsChevronDown } from "react-icons/bs";
+
+
 
 const AssetDetails = () => {
   const { theme } = useContext(ThemeContext);
@@ -253,7 +255,7 @@ const AssetDetails = () => {
               }}
             >
               <BsCodeSlash />
-              <p>Source code</p>
+              <p className="source-code-icon">Source code</p>
               <BsBoxArrowUpRight />
             </div>
 
@@ -397,7 +399,8 @@ const AssetDetails = () => {
               </div>
             </div>
           </div>
-          {/* Mobile view Market Cap    when you click on more stats*/}
+
+          {/* MOBILE VIEW MARKET CAP - BEGINNING OF MORE STATS */}
           <div className="mobile-view-container">
             <div className={`${showMore && "show"} mobile-view `}>
               <div className="third-section2">
@@ -464,7 +467,7 @@ const AssetDetails = () => {
                       </p>
                       <p className="market-arrow-up-one">
                         {" "}
-                        <IoMdArrowDropup />
+                        <MdArrowDropDown />
                         1.72%
                       </p>
                     </div>
@@ -533,10 +536,7 @@ const AssetDetails = () => {
                   <button className="market-arrow-up-button"></button>
                   <p></p>
 
-                  <div
-                    className="market-cap-sub"
-                  
-                  >
+                  <div className="market-cap-sub">
                     <p className="market-cap">
                       Max Supply <BsInfoCircle />
                     </p>
@@ -580,7 +580,7 @@ const AssetDetails = () => {
             </button>
           </div>
 
-          {/* end of more stats */}
+          {/* END OF MORE STATS ON MOBILE VIEW */}
 
           <div className="buttons">
             <div className="button-list">
@@ -662,9 +662,9 @@ const AssetDetails = () => {
                 1.72%
               </p>
               <div className="market-volume-section">
-                <p className="market-volume">24h Volume/Market </p>
+                <p className="market-volume">24h     Volume/Market Cap</p>
                 {/* <p>Cap 0.0249</p> */}
-                {data.price ? `$${parseFloat(data.price)}` : ""}
+                {data.price ? `$${parseFloat(data.price).toFixed(0)}` : ""}
               </div>
             </div>
             <div
