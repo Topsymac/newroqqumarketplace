@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import AssetDetails from "../../components/asset-details/AssetDetails";
-import Converter from "../../components/Converter/Converter";
+// import Converter from "../../components/Converter/Converter";
 import Card from "../../components/Card/Card";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
@@ -37,7 +37,7 @@ const Details = () => {
             }}
           ></div>
         </div>
-        <Converter />
+        {/* <Converter /> */}
         <Card />
       </div>
       <Footer />

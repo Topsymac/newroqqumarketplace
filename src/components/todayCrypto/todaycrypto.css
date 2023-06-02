@@ -2,7 +2,7 @@
   .todayCrypto {
     padding-top: 22px;
     padding-bottom: 22px;
-    /* padding: 20px; */
+    padding: 15px 25px;
     /* background-color: #fafbfe; */
   }
   .todayCrypto__header {
@@ -49,7 +49,7 @@
     /* padding: 10px 0px; */
     padding-top: 8px;
     padding-bottom: 10px;
-    padding-left: 27px;
+    /* padding-left: 27px; */
     padding-right: 37px;
     justify-content: space-between;
     align-items: center;
@@ -57,12 +57,12 @@
   .todayCrypto__trendingToken::-webkit-scrollbar {
     display: none;
   }
-  .todayCrypto__header {
+  /* .todayCrypto__header {
+    margin-left: 20px;
+  } */
+  /* .todayCrypto__paragraph {
     margin-left: 27px;
-  }
-  .todayCrypto__paragraph {
-    margin-left: 27px;
-  }
+  } */
 }
 
 .todayCrypto__read-more {

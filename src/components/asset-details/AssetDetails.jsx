@@ -135,7 +135,7 @@ const AssetDetails = () => {
           <div
             className="rank"
             style={{
-              backgroundColor: theme === "Light" ? "#666872" : "#333546",
+              backgroundColor: theme === "Light" ? "#808a9d" : "#333546",
               color: theme === "Light" ? "black" : "#ffffff",
             }}
           >
@@ -662,7 +662,7 @@ const AssetDetails = () => {
                 1.72%
               </p>
               <div className="market-volume-section">
-                <p className="market-volume">24h     Volume/Market Cap</p>
+                <p className="market-volume">24h Volume/Market Cap</p>
                 {/* <p>Cap 0.0249</p> */}
                 {data.price ? `$${parseFloat(data.price).toFixed(0)}` : ""}
               </div>

@@ -2,14 +2,14 @@
   flex-direction: column;
 }
 .converter-container {
-  padding: 35px;
+  padding: 10px;
 }
 .converts {
   display: flex;
   align-items: center;
   border-radius: 10px;
   border: 1px solid #f7fafd;
-  width: 68%;
+  /* width: 68%; */
   overflow: hidden;
   position: relative;
 }
@@ -64,6 +64,7 @@
 .converter-bitcoin {
   font-size: 12px;
   text-transform: capitalize;
+  white-space: nowrap;
 }
 
 .convert-one {
@@ -92,7 +93,7 @@
   background-color:transparent;
   border: none;
   height: 20px;
-  text-align: left;
+  text-align: right;
   font-size: 20px;
 }
 @media (max-width: 600px) {

@@ -9,6 +9,7 @@ import { formatDate } from "../../utilis/FormatDate";
 import { ThemeContext } from "../../context/ThemeContext";
 
 import "./chartapicomponent.css";
+import Converter from "../Converter/Converter";
 
 const ChartApiComponent = (props) => {
   const location = useLocation();
@@ -132,22 +133,25 @@ const ChartApiComponent = (props) => {
               </div>
             </div>
             <div>
-              <ChartComponent
-                {...props}
-                data={prices}
-                timeInterval={timeInterval}
-                colors={{
-                  backgroundColor: "transparent",
-                  // lineColor = "rgba(197, 203, 206, 0.176)",
-                  //   lineColor = "#16C784",
-                  textColor: "black",
-                  // areaTopColor = "white",
-                  // areaBottomColor = "#16c7833e",
-                  // lineWidth = 1,
-                  //   areaTopColor = "#2962FF",
-                  //   areaBottomColor = "rgba(41, 98, 255, 0.28)",
-                }}
-              />
+              <div>
+                <ChartComponent
+                  {...props}
+                  data={prices}
+                  timeInterval={timeInterval}
+                  colors={{
+                    backgroundColor: "transparent",
+                    // lineColor = "rgba(197, 203, 206, 0.176)",
+                    //   lineColor = "#16C784",
+                    textColor: "black",
+                    // areaTopColor = "white",
+                    // areaBottomColor = "#16c7833e",
+                    // lineWidth = 1,
+                    //   areaTopColor = "#2962FF",
+                    //   areaBottomColor = "rgba(41, 98, 255, 0.28)",
+                  }}
+                />
+              </div>
+              <div> <Converter/> </div>
             </div>
           </div>
         </div>
