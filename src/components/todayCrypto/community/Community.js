@@ -123,7 +123,7 @@ const Community = () => {
                       </div>
                       <p
                         style={{
-                          marginTop: "5px",
+                          marginTop: "7px",
                           marginLeft: "25px",
                           fontSize: "14px",
                         }}
