@@ -205,9 +205,22 @@ const TableRow = ({ name, symbol, price, data }) => {
           navigate("/details", { state: { coinData: data, price: price } });
         }}
       >
-        $208,648,137,656<span style={{textAlign: "end", marginRight: "5px"}}>70,345 BTC</span>
+        $208,648,137,656
+        <span style={{ textAlign: "end", marginRight: "5px" }}>70,345 BTC</span>
       </td>
-      <td className="chart">19,352,668 BTC</td>
+      <td className="changers">
+        19,352,668 BTC
+        {symbol === "btc" ? (
+          <span>
+            <p className="progress">
+              <p className="progressBar"></p>
+            </p>
+          </span>
+        ) : (
+          ""
+        )}
+        
+      </td>
       <td
         className="buys"
         onClick={() => {
