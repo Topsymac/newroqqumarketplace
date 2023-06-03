@@ -35,3 +35,14 @@
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
+.communityComponent__Link-div {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.communityComponent__fontawesome-right {
+  font-weight: bold;
+  font-size: 12px;
+  margin-left: 7px;
+}

@@ -21,16 +21,14 @@ const GuestPost = () => {
           className="guestPost__div"
           style={{
             backgroundColor: theme === "Light" ? "#F8FAFD" : "#171924",
-            padding: "15px 20px",
-            borderTopLeftRadius: "13px",
-            borderTopRightRadius: "13px",
           }}
         >
-          <div style={{ height: "40px" }}>
+          <div className="guestPost__img-div">
             <img
               src={theme === "Dark" ? Logowhite : Logo}
               alt="Logo"
-              style={{ width: "100px", height: "25px" }}
+              // style={{ width: "100px", height: "25px" }}
+              className="guestPost__img"
             />
             {/* <i className="fa-sharp fa-solid fa-badge-check"></i> */}
             <span
@@ -46,6 +44,8 @@ const GuestPost = () => {
               text="Follow"
               paddingTop="8"
               paddingBottom="9"
+              paddingLeft="12"
+              paddingRight="12"
               borderRadius="5"
               // height="30"
               // width="60"
@@ -69,13 +69,14 @@ const GuestPost = () => {
             </div>
           </div>
         </div>
-        <div className="card-img-overlay guestPost__overlay">
+        <div className="guestPost__overlay">
           <CommunityBtn
             text="Sign up to discuss"
             // padding="10"
-            paddingLeft="30"
+            paddingTop="12"
+            paddingLeft="25"
             paddingBottom="13"
-            // paddingRight="30"
+            paddingRight="5"
             borderRadius="8"
             width="155"
             margin="auto"

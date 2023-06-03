@@ -1,42 +1,45 @@
-/* .fixed-position{
-  position: fixed;
-  top: 0;
-  left: 0;
-} */
-
-@media screen and (min-width: 100px){
-    .chartApiComponent__communityComponent{
-        margin-top: 40px;
-        width:100%
-    }
-    .chartApiComponent__chart{
-        width: 100%;
-        margin:5px
-    }
-}@media screen and (min-width: 576px){}
-@media screen and (min-width: 768px){}
-@media screen and (min-width: 992px){}
-@media screen and (min-width: 1200px){
-    .chartApiComponent__chart{
-        width: 66%;
-        margin: 5px;
-        padding-left: 15px;
-    }
-    .chartApiComponent__communityComponent{
-        margin-top: 0px;
-        width:31.5%
-    }
+.chartApiComponent__chart-paragraph {
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.chartApiComponent{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: start;
-    padding: 6px;
+@media screen and (min-width: 100px) {
+  .chartApiComponent__communityComponent {
+    margin-top: 40px;
+    width: 100%;
+  }
+  .chartApiComponent__chart {
+    width: 100%;
+    margin: 5px;
+  }
+}
+@media screen and (min-width: 576px) {
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 992px) {
+}
+@media screen and (min-width: 1200px) {
+  .chartApiComponent__chart {
+    width: 66%;
+    margin: 5px;
+    padding-left: 15px;
+  }
+  .chartApiComponent__communityComponent {
+    margin-top: 0px;
+    width: 31.5%;
+  }
 }
 
-.chartApiComponent__lightweight-molecule{
-    margin-top: 25px;
-    margin-bottom: 35px;
+.chartApiComponent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  padding: 6px;
+}
+
+.chartApiComponent__lightweight-molecule {
+  margin-top: 25px;
+  margin-bottom: 35px;
 }
