@@ -116,7 +116,7 @@ th {
 }
 .thead th:nth-child(10) {
   width: 14%;
-  padding-left: 20px;
+  padding-left: 40px;
   
 }
 .thead th:nth-child(11) {
@@ -166,6 +166,7 @@ td a {
 .changers {
   text-align: right!important;
   padding-right: 30px;
+  padding-left: 30px;
   
 }
 .changers span {

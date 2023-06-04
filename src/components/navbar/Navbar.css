@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  padding: 5px 25px;
+  padding: 10px 25px;
   border-bottom: 1px solid gray;
 }
 .left-Topnav span {
@@ -11,6 +11,7 @@
 }
 .right-Topnav {
   display: flex;
+  /* align-items: center; */
   gap: 0.7rem;
 }
 .toLeftNav {
@@ -29,7 +30,7 @@
   gap: 4px;
 }
 .TopNavBorderRight{
-  border-right: 1px solid #eff2f5;
+  border-right: 1px solid;
   margin: 9px 0px;
 }
 .SignUpBtn{
@@ -39,6 +40,7 @@
   background: rgb(56, 97, 251);
   color: #fff;
   font-weight: 600;
+  height: 34px;
 }
 .LogInBtn{
   padding: 0px 12px ;
@@ -48,6 +50,7 @@
   background: #fff;
   border: 1px solid rgb(56, 97, 251);
  font-weight: 600;
+ height: 34px;
 }
 .navbartoo {
   display: none;

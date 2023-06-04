@@ -212,14 +212,27 @@ const TableRow = ({ name, symbol, price, data }) => {
         19,352,668 BTC
         {symbol === "btc" ? (
           <span>
-            <p className="progress">
-              <p className="progressBar"></p>
+            <p
+              className="progress"
+              style={{
+                backgroundColor:
+                  theme === "Light" ? "#eff2f5" : "rgb(34,37,49)",
+              }}
+            >
+              <p
+                className="progressBar"
+                style={{
+                  backgroundColor:
+                    theme === "Light"
+                      ? "rgb(192, 201, 216)"
+                      : "rgb(50, 53, 70)",
+                }}
+              ></p>
             </p>
           </span>
         ) : (
           ""
         )}
-        
       </td>
       <td
         className="buys"

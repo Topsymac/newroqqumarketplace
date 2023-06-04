@@ -30,7 +30,11 @@ const Input = () => {
             }}
           />
         </div>
-        <BsSlashSquareFill fill="rgb(166, 176, 195)" size="19px" />
+        {theme === "Dark" ? (
+          <BsSlashSquareFill fill="rgb(100, 107, 128)" size="19px" />
+        ) : (
+          <BsSlashSquareFill fill="rgb(166, 176, 195)" size="19px" />
+        )}
       </div>
     </div>
   );
