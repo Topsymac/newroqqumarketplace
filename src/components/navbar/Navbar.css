@@ -2,11 +2,11 @@
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  padding: 15px 25px;
+  padding: 5px 25px;
   border-bottom: 1px solid gray;
 }
 .left-Topnav span {
-  color: blue;
+  color: rgb(56, 97, 251);
   padding-right: 5px;
 }
 .right-Topnav {
@@ -36,23 +36,25 @@
   padding: 0px 12px;
   border-radius: 10px;
   border: 1px;
-  background: blue;
+  background: rgb(56, 97, 251);
   color: #fff;
+  font-weight: 600;
 }
 .LogInBtn{
   padding: 0px 12px ;
   border-radius: 10px;
   border: 1px;
-  color: blue;
+  color: rgb(56, 97, 251);
   background: #fff;
-  border: 1px solid blue;
- 
+  border: 1px solid rgb(56, 97, 251);
+ font-weight: 600;
 }
 .navbartoo {
   display: none;
 }
 .Navbar-wrapper {
   display: flex;
+  
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
@@ -70,7 +72,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 .themeBtn {
   background-color: transparent;

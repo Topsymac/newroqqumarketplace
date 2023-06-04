@@ -43,9 +43,19 @@ const NavAsset = () => {
             <Portfolio />
           </div>
         </div>
-        <div className="TopNavBorderRight"></div>
-        <div className="middleAssNav">
-          <p >Cryptocurrencies</p>
+        <div
+          className="assetNavBorderRight"
+          style={{
+            borderRightColor: theme === "Light" ? "#eff2f5" : "rgb(34,37,49)",
+          }}
+        ></div>
+        <div
+          className="middleAssNav"
+          style={{
+            color: theme === "Light" ? "rgb(88, 102, 126)" : "white",
+          }}
+        >
+          <p>Cryptocurrencies</p>
 
           <p>Categories</p>
 

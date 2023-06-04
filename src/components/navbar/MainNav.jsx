@@ -8,15 +8,16 @@ import Input from "../../atoms/Input";
 import { ThemeContext } from "../../context/ThemeContext";
 
 const MainNav = () => {
+  
   const { theme } = useContext(ThemeContext);
   return (
     <div className="Navbar-wrapper">
       <div className="left-Nav">
-          <img
-            src={theme === "Dark" ? Logowhite : Logo}
-            alt="Logo"
-            style={{ width: "120px", height: "30px" }}
-          />
+        <img
+          src={theme === "Dark" ? Logowhite : Logo}
+          alt="Logo"
+          style={{ width: "120px", height: "30px" }}
+        />
         {/* <img src={Logo} alt="" /> */}
         <p>Cryptocurrencies</p>
         <p>Exchanges</p>

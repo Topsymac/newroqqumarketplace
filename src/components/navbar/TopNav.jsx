@@ -50,9 +50,21 @@ const TopNav = () => {
             />
           </button>
         </div>
-        <div className="TopNavBorderRight"></div>
-        <img src={diamond} alt="" />
-        <button className="LogInBtn">Log In</button>
+        <div
+          className="TopNavBorderRight"
+          style={{
+            borderRightColor: theme === "Light" ? "#eff2f5" : "rgb(34,37,49)",
+          }}
+        ></div>
+        <img src={diamond} alt="" width="20px" />
+        <button
+          className="LogInBtn"
+          style={{
+            backgroundColor: theme === "Light" ? "#FFF" : "hsl(235, 21%, 11%)",
+          }}
+        >
+          Log In
+        </button>
         <button className="SignUpBtn">Sign Up</button>
         {/* <Button props="Log In" /> */}
         {/* <Button props="Sign up" /> */}

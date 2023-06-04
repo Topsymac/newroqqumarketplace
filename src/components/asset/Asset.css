@@ -5,6 +5,7 @@
 .assetNav {
   display: flex;
   gap: 2rem;
+  justify-content: space-between;
   font-weight: 600;
   font-size: 12px;
   padding: 25px;
@@ -17,19 +18,24 @@
 }
 .leftAssNav {
   display: flex;
-  gap: 1rem;
+  gap: 5px;
   /* padding-right: 15px; */
   /* border-right: 2px solid grey; */
 }
 .middleAssNav {
   display: flex;
-  gap: 1.7rem;
-  color: rgb(88, 102, 126);
+  gap: 1.8rem;
+  /* color: rgb(88, 102, 126); */
+}
+@media only screen and (max-width: 1400px){
+  .middleAssNav{
+    gap: 1.5rem;
+  }
 }
 .rightAssNav {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 .box {
   display: flex;
@@ -167,6 +173,10 @@ td a {
   padding-top: 5px;
 
 
+}
+.assetNavBorderRight{
+  border-right: 1px solid #eff2f5;
+  margin: 9px 0px;
 }
 .progress,
 .progressBar {
