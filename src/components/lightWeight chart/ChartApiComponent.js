@@ -109,10 +109,9 @@ const ChartApiComponent = (props) => {
         <div className="chartApiComponent__chart">
           <div>
             <p
+              className="chartApiComponent__chart-paragraph"
               style={{
                 color: theme === "Dark" ? "white" : "",
-                fontWeight: "bold",
-                fontSize: "20px",
               }}
             >
               {`${
@@ -151,7 +150,10 @@ const ChartApiComponent = (props) => {
                   }}
                 />
               </div>
-              <div> <Converter/> </div>
+              <div>
+                {" "}
+                <Converter />{" "}
+              </div>
             </div>
           </div>
         </div>

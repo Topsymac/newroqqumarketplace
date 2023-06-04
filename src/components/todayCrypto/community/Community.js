@@ -229,7 +229,7 @@ const Community = () => {
                         </div>
                       </div>
                     </div>
-                    <div style={{ display: "flex", marginTop: "15px" }}>
+                    <div style={{ display: "flex", marginTop: "15px",marginLeft:"5px" }}>
                       <div>
                         <img
                           alt="**"

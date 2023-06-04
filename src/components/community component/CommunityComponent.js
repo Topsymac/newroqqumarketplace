@@ -22,17 +22,17 @@ const CommunityComponent = () => {
                 <Text text="Community" />
               </div>
               <div>
-                <div style={{ fontWeight: "bold", fontSize: "12px" }}>
+                <div className="communityComponent__Link-div">
                   <Link className="communityComponent__Link" to="/">
                     <Text text="View on Community" />
                     <i
-                      className="fa fa-angle-right"
+                      className="fa fa-angle-right communityComponent__fontawesome-right"
                       aria-hidden="true"
-                      style={{
-                        fontWeight: "bold",
-                        fontSize: "12px",
-                        marginLeft: "7px",
-                      }}
+                      // style={{
+                      //   fontWeight: "bold",
+                      //   fontSize: "12px",
+                      //   marginLeft: "7px",
+                      // }}
                     ></i>
                   </Link>
                 </div>

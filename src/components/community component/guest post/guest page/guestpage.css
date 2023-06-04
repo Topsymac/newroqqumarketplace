@@ -46,4 +46,6 @@
 .guestPage__icon-div {
   display: flex;
   align-items: center;
+  gap: 10px;
+  /* justify-content: space-between; */
 }
