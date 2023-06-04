@@ -24,6 +24,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 import { BsPlus } from "react-icons/bs";
 import { BsChevronRight } from "react-icons/bs";
 import { BsChevronDown } from "react-icons/bs";
+import { MdOutlineDone } from "react-icons/md";
 
 
 
@@ -384,7 +385,9 @@ const AssetDetails = () => {
                 {/* $27,169.57 */}
                 {data.price ? `$${parseFloat(data.price).toFixed(2)}` : ""}
               </p>
-              <button className="low-list-button"></button>
+              <div className="low-list-button">
+                <button className="low-list-button-one"></button>
+              </div>
               <p className="low">High:</p>
               <p className="low-listed">
                 {data.price ? `$${parseFloat(data.price).toFixed(2)}` : ""}
@@ -533,8 +536,10 @@ const AssetDetails = () => {
                     </p>
                     <p className="market-digit">19,354,084 BTC</p>
                   </div>
-                  <button className="market-arrow-up-button"></button>
-                  <p></p>
+
+                  {/* <button className="market-arrow-up-buttons">
+                    <button className="market-arrow-up-button"></button>
+                  </button> */}
 
                   <div className="market-cap-sub">
                     <p className="market-cap">
@@ -745,12 +750,18 @@ const AssetDetails = () => {
             >
               <p className="market-cap">
                 Circulating Supply
-                <BsInfoCircle />
+                
+                  <BsInfoCircle />
+      
+                <p className="tick-sign">
+                  <MdOutlineDone />
+                </p>
               </p>
               <p className="market-digit">19,354,081 BTC</p>
-              <p>
-                <button className="market-arrow-up-button"></button>
-              </p>
+
+              <div className="market-arrow-up-button">
+                <button className="market-arrow-up-buttons"></button>
+              </div>
 
               <div className="vol">
                 <div className="vols">

@@ -382,9 +382,21 @@
   font-size: small;
 }
 .low-list-button {
-  width: 60%;
+  width: 120px;
   border: none;
-  height: 10px;
+  height: 5px;
+  /* background-color: #787171; */
+  background-color: rgb(192, 180, 180); 
+  border-radius: 5px;
+  display: flex;
+}
+.low-list-button-one{
+  /* background-color: rgb(192, 180, 180);  */
+  background-color: #787171;
+  border: 1px solid #787171;
+  border-radius: 2px;
+  width: 70px;
+  height: 5px;
 }
 .low-list-twenty-four{
   display: none;
@@ -413,11 +425,21 @@
   color: red;
 }
 .market-arrow-up-button {
-  width: 100%;
+  width: 155px;
   border: none;
   height: 5px;
-  background-color: gray;
+  background-color: rgb(192, 180, 180);  
   border-radius: 5px;
+  /* display: flex; */
+}
+.market-arrow-up-buttons{
+  width: 130px;
+  border: none;
+  height: 5px;
+  display: flex;
+  background-color: #787171;
+  border-radius: 5px;
+  display: flex;
 }
 .market-volume {
   color: gray;
@@ -438,6 +460,12 @@
   column-gap: 5px;
   font-size: small;
   color: gray;
+}
+
+.tick-sign{
+  background-color: #1743e1;
+  border-radius: 30px;
+  padding: 1.5px;
 }
 .market-digit-ones {
   margin-bottom: 55px;
@@ -478,19 +506,20 @@
   }
 }
 .buy {
-  background-color: #3861fb;
+  /* background-color: #3861fb; */
+  background-color: #6088FF;
   border-radius: 8px;
   color: #fff;
   padding: 10px;
   height: 30px;
-  border: 0.5px solid blue;
+  border: 0.5px solid #6088FF;
   align-items: center;
   display: flex;
   cursor: pointer;
-  margin-top: 108px;
+  margin-top: 112px;
 }
 .buy:hover {
-  background-color: #2544d4;
+  background-color: #305fec;
 }
 .earn-crypto {
   background-color: #3861fb;
