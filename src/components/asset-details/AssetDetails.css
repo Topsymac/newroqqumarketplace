@@ -352,7 +352,7 @@
 .btc-price {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  column-gap: 20px;
 }
 .red-button {
   background-color: #ea3943;
@@ -418,6 +418,10 @@
 .market-digit {
   font-size: small;
 }
+.market-digit-top{
+  display: flex;
+  column-gap: 30px;
+}
 .market-arrow-up {
   color: green;
 }
@@ -463,9 +467,9 @@
 }
 
 .tick-sign{
-  background-color: #1743e1;
-  border-radius: 30px;
-  padding: 1.5px;
+  background-color: #646a82;
+  border-radius: 8px;
+  padding: 1px;
 }
 .market-digit-ones {
   margin-bottom: 55px;

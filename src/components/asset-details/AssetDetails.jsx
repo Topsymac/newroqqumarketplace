@@ -750,14 +750,20 @@ const AssetDetails = () => {
             >
               <p className="market-cap">
                 Circulating Supply
-                
-                  <BsInfoCircle />
-      
-                <p className="tick-sign">
+                <BsInfoCircle />
+                <p
+                  className="tick-sign"
+                  style={{
+                    color: theme === "Light" ? "black" : "#575050",
+                  }}
+                >
                   <MdOutlineDone />
                 </p>
               </p>
-              <p className="market-digit">19,354,081 BTC</p>
+              <div className="market-digit-top">
+                <p className="market-digit">19,354,081 BTC</p>
+                <p>92%</p>
+              </div>
 
               <div className="market-arrow-up-button">
                 <button className="market-arrow-up-buttons"></button>
