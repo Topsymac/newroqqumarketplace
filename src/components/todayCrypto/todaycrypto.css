@@ -124,9 +124,18 @@
   }
 
   input:checked + .todayCrypto__slider {
-    /* background-color: #2196f3; */
-    background-color: #CFD6E4;
+    /* background-color: #323546; */
+    background-color: #CFD6E4; 
+    /* light mode */
   }
+
+  /* .todayCrypto__slider.light-mode {
+    background-color: #cfd6e4;
+  }
+
+  .todayCrypto__slider.dark-mode {
+    background-color: #323546;
+  } */
 
   input:checked + .todayCrypto__slider::before {
     transform: translate(-26px);

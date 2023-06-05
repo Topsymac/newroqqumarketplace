@@ -10,6 +10,7 @@ import { ThemeContext } from "../../context/ThemeContext";
 const TodayCrypto = () => {
   const { theme } = useContext(ThemeContext);
   const [showHightlight, setShowHightlight] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
 
   const switchfunction = () => {
     if (showHightlight === true) {
@@ -18,9 +19,15 @@ const TodayCrypto = () => {
       setShowHightlight(true);
     }
   };
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
+
   return (
     <>
-      {/* #323546 */}
       <div
         className="todayCrypto"
         style={{
@@ -81,10 +88,31 @@ const TodayCrypto = () => {
                 </span>
                 <div>
                   <label className="todayCrypto__switch">
-                    <input type="checkbox" onClick={() => switchfunction()} />
+                    <input
+                      type="checkbox"
+                      onClick={() => switchfunction()}
+                      onChange={handleCheckboxChange}
+                      checked={isChecked}
+                      style={{
+                        backgroundColor:
+                          isChecked && theme === "Dark"
+                            ? "#CFD6E4"
+                            : " #3861fb",
+                      }}
+                    />
                     <span
+                      // className={`todayCrypto__slider ${
+                      //   darkMode ? "dark-mode" : "light-mode"
+                      // }`}
                       className="todayCrypto__slider"
-                      // onClick={() => setShowHightlight(true)}
+                      style={{
+                        backgroundColor:
+                          isChecked && theme === "Dark"
+                            ? "#323546"
+                            : isChecked && theme === "Light"
+                            ? "#CFD6E4"
+                            : "#3861fb",
+                      }}
                     ></span>
                   </label>
                 </div>
