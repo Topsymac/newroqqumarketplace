@@ -60,7 +60,12 @@ const Converter = () => {
         color: theme === "Light" ? "black" : "white",
       }}
     >
-      <div className="converter-container">
+      <div
+        className="converter-container"
+        style={{
+          color: theme === "Light" ? "black" : "#ffffff",
+        }}
+      >
         <div>
           <div>
             <h3>
@@ -73,6 +78,7 @@ const Converter = () => {
           style={{
             border:
               theme === "Light" ? "1px solid #EFF2F5" : "1px solid #222531",
+            backgroundColor: theme === "Light" ? "#FFF" : "#222531",
           }}
         >
           <div className="bitcoin-converter">
@@ -98,6 +104,9 @@ const Converter = () => {
               value={tokenInputValue}
               type="number"
               className="converter-input"
+              style={{
+                color: theme === "Light" ? "black" : "#ffffff",
+              }}
               onChange={(e) => {
                 setTokenInputValue(e.target.value);
                 setFiatInputValue(
@@ -106,7 +115,12 @@ const Converter = () => {
               }}
             />
           </div>
-          <div className="bitcoin-converter grey">
+          <div
+            className="bitcoin-converter grey"
+            style={{
+              color: theme === "Light" ? "black" : "#ffff",
+            }}
+          >
             <div className="img-container">
               <img src={USD} alt="usd" className="converter-btc" />
               <div className="bitcoin-converter-one">
@@ -127,6 +141,9 @@ const Converter = () => {
               value={fiatInputValue}
               type="number"
               className="converter-input"
+              style={{
+                color: theme === "Light" ? "black" : "black",
+              }}
               // onChange={(e) => setFiatInputValue(e.target.value)}
               onChange={(e) => {
                 setFiatInputValue(e.target.value);

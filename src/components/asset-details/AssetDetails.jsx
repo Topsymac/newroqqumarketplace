@@ -64,7 +64,7 @@ const AssetDetails = () => {
     <div
       className="container"
       style={{
-        backgroundColor: theme === "Light" ? "#FFF" : "hsl(235, 21%, 11%)",
+        backgroundColor: theme === "Light" ? "#FFF" : "#222531",
         color: theme === "Light" ? "black" : "white",
       }}
     >
@@ -75,7 +75,14 @@ const AssetDetails = () => {
             <BiChevronRight />
             <p className="coins">Coins</p>
             <BiChevronRight />
-            <p className="breadcrumb-bitcoin">Bitcoin</p>
+            <p
+              className="breadcrumb-bitcoin"
+              style={{
+                color: theme === "Light" ? "black" : "#ffffff",
+              }}
+            >
+              Bitcoin
+            </p>
           </div>
         </div>
 
