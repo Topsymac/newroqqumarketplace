@@ -17,7 +17,7 @@ const LightweightMolecule = ({ onClickProp }) => {
         <div
           className="LightweightMolecule__marketNPrice"
           style={{
-            backgroundColor: theme === "Light" ? "#EFEFEF" : "#313445",
+            backgroundColor: theme === "Light" ? "#EFF2F5" : "#323546",
             padding: "4px",
             borderRadius: "10px",
             paddingLeft: "3px",
@@ -41,7 +41,8 @@ const LightweightMolecule = ({ onClickProp }) => {
         <div
           className="LightweightMolecule__timeInterval"
           style={{
-            backgroundColor: theme === "Light" ? "#EFEFEF" : "#313445",
+            backgroundColor: theme === "Light" ? "#EFF2F5" : "#323546",
+            color: theme === "Dark" ? "#808a9d" : "",
             padding: "3px",
             borderRadius: "10px",
             paddingLeft: "3px",
@@ -120,7 +121,8 @@ const LightweightMolecule = ({ onClickProp }) => {
             style={{
               position: "relative",
               top: "5px",
-              borderLeft: "1px solid #5d6b82",
+              borderLeft:
+                theme === "Light" ? "1px solid #CFD6E4" : "1px solid #808a9d",
               // borderRight: "1px solid #5d6b82",
               height: "18px",
             }}
@@ -141,7 +143,8 @@ const LightweightMolecule = ({ onClickProp }) => {
             style={{
               position: "relative",
               top: "5px",
-              borderLeft: "1px solid #5d6b82",
+              borderLeft:
+                theme === "Light" ? "1px solid #CFD6E4" : "1px solid #808a9d",
               // borderRight: "1px solid #5d6b82",
               height: "18px",
               marginRight: "4px",

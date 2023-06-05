@@ -1,8 +1,8 @@
 @media screen and (min-width: 100px) {
   .todayCrypto {
-    padding-top: 22px;
     padding-bottom: 22px;
     padding: 15px 25px;
+    padding-top: 35px;
     /* background-color: #fafbfe; */
   }
   .todayCrypto__header {
@@ -15,6 +15,9 @@
   .todayCrypto__trendingToken {
     display: none;
   }
+  .todayCrypto__highlight {
+    display: none;
+  }
 }
 @media screen and (min-width: 576px) {
 }
@@ -22,37 +25,31 @@
 }
 @media screen and (min-width: 992px) {
 }
-/* @media screen and (max-width: 1400px) {
+@media screen and (min-width: 1200px) {
   .todayCrypto {
-    padding: 20px;
-    padding-left: 28px;
-    padding-top: 35px;
-    background-color: #fafbfe;
+    padding-bottom: 22px;
+    padding: 15px 25px;
+    padding-top: 40px;
+    /* background-color: #fafbfe; */
   }
   .todayCrypto__header {
     font-weight: bold;
     font-size: 24px;
   }
-  .todayCrypto__paragraph {
-    font-size: 15px;
-  }
-  .todayCrypto__trendingToken {
-    display: none;
-  }
-} */
-@media screen and (min-width: 1200px) {
   .todayCrypto__trendingToken {
     display: flex;
     flex-wrap: nowrap;
-    /* gap: 5px; */
     overflow-x: scroll;
-    /* padding: 10px 0px; */
     padding-top: 8px;
     padding-bottom: 10px;
-    /* padding-left: 27px; */
-    padding-right: 37px;
+    padding-right: 30px;
     justify-content: space-between;
     align-items: center;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
   }
   .todayCrypto__trendingToken::-webkit-scrollbar {
     display: none;
@@ -63,6 +60,82 @@
   /* .todayCrypto__paragraph {
     margin-left: 27px;
   } */
+  .todayCrypto__highlight {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #58667e;
+    font-size: 14px;
+  }
+
+  .todayCrypto__switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 23px;
+    /* background-color: ; */
+  }
+
+  .todayCrypto__switch input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  .todayCrypto__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: #ccc; */
+    background-color: #3861fb;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
+  .todayCrypto__slider::before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 18px;
+    top: 3px;
+    left: 29px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+
+  input:checked + .todayCrypto__slider {
+    /* background-color: #2196f3; */
+    background-color: #CFD6E4;
+  }
+
+  input:checked + .todayCrypto__slider::before {
+    transform: translate(-26px);
+    -webkit-transform: translate(-26px);
+    -moz-transform: translate(-26px);
+    -ms-transform: translate(-26px);
+    -o-transform: translate(-26px);
+  }
+  /* end of media query  */
 }
 
 .todayCrypto__read-more {
@@ -73,4 +146,10 @@
   font-size: 15px;
   margin-top: 5px;
   margin-bottom: 15px !important;
+}
+
+.todayCrypto__paragraph-div {
+  display: flex;
+  align-content: start;
+  justify-content: space-between;
 }

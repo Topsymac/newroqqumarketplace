@@ -3,9 +3,7 @@
   border: 0px;
   font-size: 12px !important;
   font-weight: bold !important;
-  color: #5d6b82  !important;
-  /*color:black !important;
-  */line-height: 1.5;
+  line-height: 1.5;
   margin: 0px;
   padding: 6px 10px !important;
   background-color: white;
@@ -23,8 +21,6 @@
   border: 0px;
   font-size: 12px !important;
   font-weight: bold !important;
-  color: #5d6b82 !important;
-  /* color:black !important; */
   padding: 6px 10px !important;
   font-family: "Inter", sans-serif;
   font-family: "Montserrat", sans-serif;
@@ -42,7 +38,6 @@
   font-size: 12px !important;
   font-weight: bold !important;
   background-color: white;
-  color: #5d6b82  !important;
   padding: 6px 10px !important;
   font-family: "Inter", sans-serif;
   font-family: "Montserrat", sans-serif;

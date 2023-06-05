@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./community.css";
 import { ThemeContext } from "../../../context/ThemeContext";
 import Logo from "../../../Images/roqqu-color.svg";
-// import Logowhite from "../../../Images/Logo-White.png";
+import Logowhite from "../../../Images/Logo-White.png";
 import communityArticleImg from "../../../Images/article communtity.png";
 import HelloArticleImg from "../../../Images/62739f727d1c136ae384201f.png";
 import communityAccount1 from "../../../Images/8277c31cdcc64aca8e5b002a710f06b0.png";
@@ -102,12 +102,13 @@ const Community = () => {
                     <div>
                       <div>
                         <img
-                          src={theme === "Dark" ? Logo : Logo}
+                          src={theme === "Dark" ? Logowhite : Logo}
                           alt="Logo"
                           style={{
-                            width: "90px",
+                            width: theme === "Dark" ? "80px" : "90px",
                             height: "20px",
                             marginTop: "15px",
+                            marginLeft: theme === "Dark" ? "5px" : "",
                           }}
                         />
                         <div
@@ -229,7 +230,13 @@ const Community = () => {
                         </div>
                       </div>
                     </div>
-                    <div style={{ display: "flex", marginTop: "15px",marginLeft:"5px" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        marginTop: "15px",
+                        marginLeft: "5px",
+                      }}
+                    >
                       <div>
                         <img
                           alt="**"
@@ -569,7 +576,7 @@ const Community = () => {
                       }}
                     >
                       <div>
-                        <div style={{ display: "flex",alignItems:"center" }}>
+                        <div style={{ display: "flex", alignItems: "center" }}>
                           <div>
                             <img
                               alt="**"

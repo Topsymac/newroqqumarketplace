@@ -20,7 +20,7 @@ const GuestPost = () => {
         <div
           className="guestPost__div"
           style={{
-            backgroundColor: theme === "Light" ? "#F8FAFD" : "#171924",
+            backgroundColor: theme === "Light" ? "#F8FAFD" : "#323546",
           }}
         >
           <div className="guestPost__img-div">
@@ -33,7 +33,7 @@ const GuestPost = () => {
             {/* <i className="fa-sharp fa-solid fa-badge-check"></i> */}
             <span
               className="guestPost__logoText"
-              style={{ color: theme === "Dark" ? "#808a9d" : "black" }}
+              style={{ color: theme === "Dark" ? "#808a9d" : "#808a9d" }}
             >
               <Text text="3.1M followers" />
             </span>
@@ -59,9 +59,12 @@ const GuestPost = () => {
           </div>
         </div>
         <div
-          style={{
-            opacity: theme === "Light" ? "0.2" : "0.2",
-          }}
+          style={
+            {
+              // opacity: theme === "Light" ? "0.3" : "",
+              // backgroundColor: theme === "Light" ? "#F8FAFD" : "#171924",
+            }
+          }
         >
           <div>
             <div>

@@ -28,7 +28,7 @@ const LightweightButton = ({
     <>
       <div
         className=""
-        style={{ backgroundColor: theme === "Light" ? "" : "#313445" }}
+        style={{ backgroundColor: theme === "Light" ? "#EFF2F5" : "#323546" }}
       >
         <button
           type="button"
@@ -47,9 +47,8 @@ const LightweightButton = ({
                       : buttonHoverStyle
                       ? "#0D1421"
                       : theme === "Dark"
-                      ? "#313445"
-                      : "",
-                  // backgroundColor: theme === "Light" ? "" : "#313445",
+                      ? "#323546"
+                      : "#EFF2F5",
                   color: theme === "Light" ? "#5d6b82" : "#808a9d",
                 }
             // )
