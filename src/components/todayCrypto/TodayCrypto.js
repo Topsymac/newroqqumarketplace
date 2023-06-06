@@ -83,7 +83,11 @@ const TodayCrypto = () => {
           <div>
             <div>
               <div className="todayCrypto__highlight">
-                <span>
+                <span
+                  style={{
+                    color: theme === "Light" ? "#58667e" : "#A1A7BB",
+                  }}
+                >
                   <Text text="Highlights"></Text>
                 </span>
                 <div>

@@ -7,7 +7,7 @@
 
 .guestPost__overlay {
   position: relative;
-  top: -115px;
+  top: -120px;
   z-index: 10;
   /* margin-top: 140px; */
 }
