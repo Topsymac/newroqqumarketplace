@@ -11,7 +11,7 @@ const BlogPost = () => {
       <div
         className="blogPost"
         style={{
-          backgroundColor: theme === "Light" ? "#F8FAFD" : "#171924",
+          backgroundColor: theme === "Light" ? "#F8FAFD" : "#202331",
           border: theme == "Light" ? "1px solid #F0F3F6" : "1px solid #2C2E3D",
         }}
       >

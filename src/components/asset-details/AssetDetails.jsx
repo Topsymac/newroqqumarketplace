@@ -65,7 +65,7 @@ const AssetDetails = () => {
     <div
       className="container"
       style={{
-        backgroundColor: theme === "Light" ? "#FFF" : "#222531",
+        backgroundColor: theme === "Light" ? "#FFF" : "",
         color: theme === "Light" ? "black" : "white",
       }}
     >

@@ -20,7 +20,7 @@ const GuestPost = () => {
         <div
           className="guestPost__div"
           style={{
-            backgroundColor: theme === "Light" ? "#F8FAFD" : "#323546",
+            backgroundColor: theme === "Light" ? "#F8FAFD" : "#202331",
           }}
         >
           <div className="guestPost__img-div">

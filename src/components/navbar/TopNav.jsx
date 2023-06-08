@@ -15,7 +15,7 @@ const TopNav = () => {
     <div
       className="Topnav-container"
       style={{
-        borderBottomColor: theme === "Light" ? "#eff2f5" : "rgb(34,37,49)",
+        borderBottomColor: theme === "Light" ? "#eff2f5" : "#323546",
       }}
     >
       <div className="left-Topnav">

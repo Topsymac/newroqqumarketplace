@@ -70,7 +70,7 @@ const Card = () => {
       
       className="card-container"
       style={{
-        backgroundColor: theme === "Light" ? "#FFF" : "hsl(235, 21%, 11%)",
+        backgroundColor: theme === "Light" ? "#FFF" : "",
         color: theme === "Light" ? "black" : "white",
       }}
     >

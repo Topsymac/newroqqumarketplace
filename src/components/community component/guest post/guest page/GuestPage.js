@@ -23,7 +23,7 @@ const GuestPage = () => {
           <div className="guestPage">
             <div
               className="guestPage__guest"
-              style={{ opacity: theme === "Dark" ? "0.5" : "0.2" }}
+              style={{ opacity: theme === "Dark" ? "0.1" : "0.1" }}
             >
               <i
                 className="fa-solid fa-user guestPage__user"
@@ -37,7 +37,7 @@ const GuestPage = () => {
               </span>
             </div>
             <div className="guestPage__bullish">
-              <div style={{ opacity: theme === "Dark" ? "0.5" : "0.2" }}>
+              <div style={{ opacity: theme === "Dark" ? "0.1" : "0.1" }}>
                 <CommunityBtn
                   text="Bullish"
                   fontAwesome="fa-solid fa-caret-up"
@@ -62,7 +62,7 @@ const GuestPage = () => {
                 style={{
                   color: theme === "Light" ? "black" : "white !important",
                   marginLeft: "0.4rem",
-                  opacity: theme === "Dark" ? "0.5" : "0.2",
+                  opacity: theme === "Dark" ? "0.1" : "0.1",
                 }}
               >
                 <CommunityBtn
@@ -90,13 +90,13 @@ const GuestPage = () => {
         </div>
         <div
           className="guestPage__btc"
-          style={{ opacity: theme === "Dark" ? "0.5" : "0.2" }}
+          style={{ opacity: theme === "Dark" ? "0.1" : "0.1" }}
         >
           <Text text="$BTC" />
         </div>
         <div
           className="guestPage__icon"
-          style={{ opacity: theme === "Dark" ? "0.5" : "0.2" }}
+          style={{ opacity: theme === "Dark" ? "0.1" : "0.1" }}
         >
           <div className="guestPage__icon-div">
             <div>

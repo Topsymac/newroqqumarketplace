@@ -8,7 +8,8 @@ const Asset = () => {
   return (
     <div
       style={{
-        backgroundColor: theme === "Light" ? "#FFF" : "hsl(235, 21%, 11%)",
+        // backgroundColor: theme === "Light" ? "#FFF" : "hsl(235, 21%, 11%)",
+        backgroundColor: theme === "Light" ? "#FFF" : "",
         color: theme === "Light" ? "black" : "white",
         hover: theme === "Light" ? "orange" : "blue",
       }}
