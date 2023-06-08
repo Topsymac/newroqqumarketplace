@@ -399,14 +399,14 @@ const AssetDetails = () => {
                 <p className="low">High:</p>
                 {data.price ? `$${parseFloat(data.price).toFixed(2)}` : ""}
               </div>
-              <div
+              {/* <div
                 className="low-list-twenty-four"
                 style={{
                   color: theme === "Light" ? "black" : "#323546",
                 }}
               >
                 24h <BsChevronDown />
-              </div>
+              </div> */}
             </div>
           </div>
 

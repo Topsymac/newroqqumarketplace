@@ -410,9 +410,9 @@
   width: 70px;
   height: 5px;
 }
-.low-list-twenty-four{
+/* .low-list-twenty-four{
   display: none;
-}
+} */
 .more-stats {
   display: none;
 }
@@ -692,9 +692,10 @@
   .sub-right-container {
     padding: 0;
     margin: 0;
+    margin-top: -30px;
   }
   .btc-price {
-    column-gap: 70px;
+    column-gap: 90px;
   }
   .website-links {
     justify-content: center;
@@ -755,6 +756,9 @@
     color: #fff;
     width: 100px;
   }
+  .rank-section{
+    margin-top: 15px; 
+  } 
   .asset-notification {
     display: block;
     border-radius: 6px;
@@ -817,10 +821,6 @@
   }
   .button-list {
   justify-content: space-between;
-  }
- 
-  .low-listed{
-  margin-left: -30px;
   }
   .low-list-button{
   display: none;
