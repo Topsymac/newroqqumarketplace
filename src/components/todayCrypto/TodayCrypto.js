@@ -31,11 +31,10 @@ const TodayCrypto = () => {
       <div
         className="todayCrypto"
         style={{
-          // backgroundColor: theme === "Light" ? "#F9FBFD" : "#21232E",
           background:
             theme === "Light"
               ? "#F9FBFD"
-              : "linear-gradient(rgb(34, 37, 49) 100%, whitesmoke )",
+              : "",
           color: theme === "Light" ? "black" : "white",
         }}
       >

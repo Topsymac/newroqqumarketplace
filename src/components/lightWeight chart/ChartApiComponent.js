@@ -104,7 +104,7 @@ const ChartApiComponent = (props) => {
       <div
         className="chartApiComponent"
         id="chartApiComponent"
-        style={{ backgroundColor: theme === "Dark" ? "#161722" : "white" }}
+        style={{ backgroundColor: theme === "Dark" ? "" : "white" }}
       >
         <div className="chartApiComponent__chart">
           <div>
