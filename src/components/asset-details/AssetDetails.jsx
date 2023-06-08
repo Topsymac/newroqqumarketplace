@@ -25,6 +25,7 @@ import { BsPlus } from "react-icons/bs";
 import { BsChevronRight } from "react-icons/bs";
 import { BsChevronDown } from "react-icons/bs";
 import { MdOutlineDone } from "react-icons/md";
+import {MdVerified} from "react-icons/md";
 
 
 
@@ -761,10 +762,10 @@ const AssetDetails = () => {
                 <p
                   className="tick-sign"
                   style={{
-                    color: theme === "Light" ? "black" : "#575050",
+                    color: theme === "Light" ? "#2544D4" : "#2544D4",
                   }}
                 >
-                  <MdOutlineDone />
+                  <MdVerified />
                 </p>
               </p>
               <div className="market-digit-top">

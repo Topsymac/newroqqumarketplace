@@ -75,12 +75,15 @@
 }
 .follow-icon{
   background-color: #3861fb;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid #3861fb;
   padding: 0.5rem;
   color: #fff;
-  width: 100px;
+  width: 80px;
   cursor: pointer; 
+  /* column-gap: 3px; */
+  justify-content: center;
+  align-items: center;
 }
 .follow-icon:hover {
   background-color: #2544d4;
@@ -320,6 +323,7 @@
 }
 .market-sub {
   padding: 0 0 0 1rem;
+  margin-top: -12px;
 }
 .vol-cex-container{
   display: flex;
@@ -428,11 +432,14 @@
   border-radius: 5px;
 }
 .market-digit {
-  font-size: small;
+  font-size: 14px;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif;
+  
 }
 .market-digit-top{
   display: flex;
   column-gap: 30px;
+  margin-top: -30px;
 }
 .market-arrow-up {
   color: green;
@@ -479,13 +486,13 @@
 }
 
 .tick-sign{
-  background-color: #646a82;
-  border-radius: 8px;
+  border-radius: 30px;
   padding: 1px;
 }
 .market-digit-ones {
   margin-bottom: 55px;
-  font-size: small;
+  font-size: 14px;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif;
 }
 .vol {
   display: flex;
