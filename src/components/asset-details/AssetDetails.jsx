@@ -768,7 +768,7 @@ const AssetDetails = () => {
                   <MdVerified />
                 </p>
               </p>
-              <div className="market-digit-top">
+              <div className="">
                 <p className="market-digit">19,354,081 BTC</p>
                 <p>92%</p>
               </div>
