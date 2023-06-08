@@ -501,6 +501,13 @@
   color: gray;
   font-size: small;
 }
+ .volz{
+  margin-bottom: -30px; 
+}
+.volz-one{
+  margin-top: 30px;
+} 
+
 .vol-one {
   font-size: small;
   color: black;

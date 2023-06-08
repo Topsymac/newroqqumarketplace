@@ -23,8 +23,8 @@ import { AiFillStar } from "react-icons/ai";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { BsPlus } from "react-icons/bs";
 import { BsChevronRight } from "react-icons/bs";
-import { BsChevronDown } from "react-icons/bs";
-import { MdOutlineDone } from "react-icons/md";
+// import { BsChevronDown } from "react-icons/bs";
+// import { MdOutlineDone } from "react-icons/md";
 import {MdVerified} from "react-icons/md";
 
 
@@ -778,24 +778,25 @@ const AssetDetails = () => {
               </div>
 
               <div className="vol">
-                <div className="vols">
+                <div className="volz">
                   <p>
                     CEX <BsInfoCircle />
                   </p>
                   <p>
                     DEX <BsInfoCircle />
                   </p>
+                 
                 </div>
 
                 <div
-                  className="vol-one"
+                  className="volz-one"
                   style={{
                     color: theme === "Light" ? "black" : "#FFFFFF",
                   }}
                 >
                   <p>13,456,676,777</p>
                   <p>13,456,676,777</p>
-                </div>
+                </div> 
               </div>
             </div>
           </div>
