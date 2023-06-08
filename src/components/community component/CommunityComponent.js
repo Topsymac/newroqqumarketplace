@@ -45,7 +45,7 @@ const CommunityComponent = () => {
               style={{
                 border:
                   theme == "Light" ? "1px solid #F0F3F6" : "1px solid #2C2E3D",
-                backgroundColor: theme == "Light" ? "#F0F3F6" : "#2C2E3D",
+                backgroundColor: theme == "Light" ? "#F0F3F6" : "#202331",
                 // borderRadius: "13px",
               }}
             >

@@ -11,7 +11,15 @@ const MainNav = () => {
   
   const { theme } = useContext(ThemeContext);
   return (
-    <div className="Navbar-wrapper">
+    <div
+      className="Navbar-wrapper"
+      style={{
+        borderBottom:
+          theme === "Light" ? "1px solid #eff2f5" : "1px solid #323546",
+        borderBottomColor: theme === "Light" ? "#eff2f5" : "#323546",
+      }}
+      // style={{ borderBottom: "1px solid #eff2f5" }}
+    >
       <div className="left-Nav">
         <img
           src={theme === "Dark" ? Logowhite : Logo}

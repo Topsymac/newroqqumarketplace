@@ -21,7 +21,7 @@ const Navbar = () => {
     <div
       className="nav-container"
       style={{
-        backgroundColor: theme === "Light" ? "#FFF" : "hsl(235, 21%, 11%)",
+        backgroundColor: theme === "Light" ? "#FFF" : "#0D1421",
         color: theme === "Light" ? "black" : "white",
       }}
     >
