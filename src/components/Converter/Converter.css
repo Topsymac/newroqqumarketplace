@@ -84,9 +84,10 @@
   left: 50%;
   transform: translateX(-50%);
   padding: 0.7rem;
-  background-color: rgba(233, 227, 227, 0.611);
+  /* background-color: rgba(233, 227, 227, 0.611); */
   border-radius: 50%;
   cursor: pointer;
+  color: rgb(132 142 161);
 }
 
 .converter-input {
@@ -94,7 +95,7 @@
   border: none;
   height: 20px;
   text-align: right;
-  font-size: 12px;
+  font-size: 18px;
 }
 @media (max-width: 600px) {
   .converter-input {

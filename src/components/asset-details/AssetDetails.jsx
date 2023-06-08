@@ -387,18 +387,18 @@ const AssetDetails = () => {
             </div>
 
             <div className="low-list">
-              <p className="low">Low:</p>
-              <p className="low-listed">
+              <div className="low-listed">
+                <p className="low">Low:</p>
                 {/* $27,169.57 */}
                 {data.price ? `$${parseFloat(data.price).toFixed(2)}` : ""}
-              </p>
+              </div>
               <div className="low-list-button">
                 <button className="low-list-button-one"></button>
               </div>
-              <p className="low">High:</p>
-              <p className="low-listed">
+              <div className="low-listed">
+                <p className="low">High:</p>
                 {data.price ? `$${parseFloat(data.price).toFixed(2)}` : ""}
-              </p>
+              </div>
               <div
                 className="low-list-twenty-four"
                 style={{

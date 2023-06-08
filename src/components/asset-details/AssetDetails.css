@@ -33,6 +33,7 @@
   text-transform: capitalize;
   color: gray;
   gap: 0.7rem;
+  margin-bottom: -25px;
 }
 .cryptocurrencies {
   color: gray;
@@ -97,6 +98,7 @@
   display: flex;
   align-items: center;
   column-gap: 5px;
+  margin-top: -12px;
 }
 .rank {
   border: none;
@@ -211,6 +213,7 @@
   display: flex;
   align-items: center;
   column-gap: 4px;
+  margin-top: -15px;
 }
 .mineable {
   display: flex;
@@ -277,6 +280,10 @@
   grid-template-columns: repeat(4, 1fr);
   padding: 1rem 0;
 }
+.sub-right-container{
+  margin-top: -10px;
+}
+
 @media (max-width: 500px) {
   .third-section {
     display: none;
@@ -380,6 +387,11 @@
 .low {
   color: gray;
   font-size: small;
+}
+
+.low-listed{
+  display: flex;
+  align-items: center;
 }
 .low-list-button {
   width: 120px;
@@ -486,6 +498,8 @@
   font-size: small;
   color: black;
 }
+
+
 @media (max-width: 600px) {
   .buttons {
     display: flex;
@@ -499,8 +513,9 @@
   column-gap: 10px;
   flex-wrap: wrap;
   row-gap: .7rem;
-  margin-top: -40px;
+  margin-top: -67px;
   padding-bottom: 40px;
+  
 }
 @media (max-width: 600px) {
   .button-list {

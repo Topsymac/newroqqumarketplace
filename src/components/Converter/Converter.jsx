@@ -78,7 +78,7 @@ const Converter = () => {
           style={{
             border:
               theme === "Light" ? "1px solid #EFF2F5" : "1px solid #222531",
-            backgroundColor: theme === "Light" ? "#FFF" : "#222531",
+            backgroundColor: theme === "Light" ? "#FFF" : "#171924",
           }}
         >
           <div className="bitcoin-converter">
@@ -119,6 +119,7 @@ const Converter = () => {
             className="bitcoin-converter grey"
             style={{
               color: theme === "Light" ? "black" : "#ffff",
+              background: theme === "Light" ? "#F8FAFD" : "#232531",
             }}
           >
             <div className="img-container">
@@ -126,9 +127,11 @@ const Converter = () => {
               <div className="bitcoin-converter-one">
                 <p
                   className="btc-converter"
-                  style={{
-                    color: theme === "Light" ? "black" : "black",
-                  }}
+                  style={
+                    {
+                      // color: theme === "Light" ? "black" : "black",
+                    }
+                  }
                 >
                   USD
                 </p>
@@ -142,7 +145,7 @@ const Converter = () => {
               type="number"
               className="converter-input"
               style={{
-                color: theme === "Light" ? "black" : "black",
+                color: theme === "Light" ? "rgb(34, 37, 49)" : "#ffffff",
               }}
               // onChange={(e) => setFiatInputValue(e.target.value)}
               onChange={(e) => {
@@ -155,6 +158,10 @@ const Converter = () => {
           </div>
           <span
             className="arrow-left-right"
+            style={{
+              backgroundColor:
+                theme === "Light" ? "#F8FAFD" : "rgb(248 250 253)",
+            }}
             onClick={() => {
               setToggle(!toggle);
             }}
